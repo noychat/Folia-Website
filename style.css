@@ -1,0 +1,183 @@
+
+.timg
+{
+    padding: 10px;
+    float: left;
+    
+    
+}
+
+
+.what
+{
+    padding: 10px;
+    float: left;
+    font-size: 400px;
+}
+
+.wrapper
+{width: 90%;
+    position: absolute;
+    padding: 5%;
+}
+
+
+/* Below is for the Contanct Page*/ 
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #474747;
+    border: 1px solid #474737;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    margin: auto;
+}
+
+
+  
+
+
+
+h1{
+    font-size: 400px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+p{
+    color: #474737;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;  
+}
+  
+.train-col:hover{
+    box-shadow: 0 0 20px 0px #ff0000;
+}
+
+@media (max-width:600px){
+    .row{
+        flex-direction: right;
+    }
+} 
+
+
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 85%;
+  
+    margin-bottom: 30px;
+    margin: auto;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-btn.red-btn{
+    border: 1px solid #474737;
+    background: transparent;
+    color: #474737;
+    margin-left: 10px;
+   
+}
+
+@media (max-width:600px){
+    .sub-header h1{
+        font-size: 24px;
+    }
+} 
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+   
+}
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+   
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+    background-color: #D7D7CB;
+    color: #474737;
+    float: left;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #D7D7CB;
+}
+
+    
+.contact-col div p{
+    padding: 0;
+    background-color: #D7D7CB;
+    color: #D7D7CB;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+    background-color: #D7D7CB;
+    
+}
+.contact-col input, .contact-col textarea{
+    width: 97%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #474737;
+    color: #D7D7CB;
+    background-color: #D7D7CB;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
