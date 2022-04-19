@@ -1,0 +1,201 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #474747;
+    border: 1px solid #474737;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    margin: auto;
+}
+
+
+  
+
+
+
+h1{
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+p{
+    color: #474737;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;  
+}
+  
+.train-col:hover{
+    box-shadow: 0 0 20px 0px #ff0000;
+}
+
+@media (max-width:600px){
+    .row{
+        flex-direction: right;
+    }
+} 
+
+
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 85%;
+  
+    margin-bottom: 30px;
+    margin: auto;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-btn.red-btn{
+    border: 1px solid #474737;
+    background: transparent;
+    color: #474737;
+    margin-left: 10px;
+   
+}
+
+@media (max-width:600px){
+    .sub-header h1{
+        font-size: 24px;
+    }
+} 
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+   
+}
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+   
+}
+.contact-col{
+    flex-basis: 50%;
+    margin-bottom: 30px;
+    background-color: #D7D7CB;
+    color: #474737;
+    float: left;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #D7D7CB;
+}
+
+    
+.contact-col div p{
+    padding: 0;
+    background-color: #D7D7CB;
+    color: #D7D7CB;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+    background-color: #D7D7CB;
+    
+}
+.contact-col input, .contact-col textarea{
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #474737;
+    color: #D7D7CB;
+    background-color: #D7D7CB;
+    margin-left: 10px;
+}
+
+</style>
+
+
+</head>
+<body>
+    
+    </section>
+    
+    
+
+    
+    <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                    
+                        <span>
+                           <div class="campus-col">
+                            <img src="pexels-mareefe-1638280 (1).jpg"
+                           </div> 
+                            
+                        </span>
+                    </div>
+                
+                </div>
+                <h1>LETS GET CONNECTED</h1>
+                <div class="contact-col">
+                    
+                    <form method="post" action="">
+                    <input type="text" name="name" placeholder="Enter your full name" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <input type="text" name="subject" placeholder="Enter your phone number" required>
+                    <input type="text" name="message" placeholder="Message..." required>
+                  
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                    </form> 
+                </div>
+            </div>
+    </section>
+    
+    <section class="campus">
+            <div class="row">
+                <div class="campus-col">
+                    <img src="aniketh-kanukurthi-Qaor6nxikUM-unsplash_edited.jpg"
+                </div>
+        
+                
+            </div>
+    </section>
+
+</body>
+</html>    
