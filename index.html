@@ -103,7 +103,7 @@
                 background-color: transparent;
             }
 
-            #transition{
+            .transition{
                 min-width: auto;
                 height:250px;
                 display: flex;
@@ -121,13 +121,22 @@
             }
 
             #bottombox{
-                background-color: rgb(57, 52, 44);
+                background-color: #CEB03E;
                 min-height: auto;
                 width: 100%;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 align-items: center;
+                color:white;
+            }
+
+            .bottomphoto{
+                max-width: 800px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
             }
 
             .textsize{
@@ -175,7 +184,7 @@
             </div>
             <br>
             <br>
-            <div id="transition">Our Services</div>
+            <div class="transition">Our Services</div>
             <div id="middlebox"><!--box for middle portion w/ services-->
                 
                 <div class="servicebox">
@@ -223,7 +232,11 @@
             </div>
             <!--<div id="transition">Contact Us</div>-->
             <div id="bottombox">
-
+                <img src="teapic.webp" class="topphoto">
+                <div id="maintextbox"> <!--box with text for main photo-->
+                    <span class="transition">About Us</span>
+                    
+                </div>
             </div>
         </div>
     </body>
