@@ -49,6 +49,18 @@
                 margin-left: 50px;
             }
 
+            #maintextbox2{
+                width:530px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                text-align: right;
+                min-height: auto;
+                align-items: center;
+                margin-right: -150px;
+            }
+
             h1{
                 font-size: 35pt;
                 color: rgba(61, 63, 49, 0.906);
@@ -71,11 +83,11 @@
                 background-color: rgba(143, 146, 111, 0.295);
             }
             
-            .aboutbutton{
+            .contactbutton{
                 background-color: rgba(61, 63, 49, 0.906);
                 color:white;
                 border-radius: none;
-                width:150px;
+                width:160px;
                 height:40px;
                 font-size: 10pt;
 
@@ -103,7 +115,7 @@
                 background-color: transparent;
             }
 
-            #transition{
+            .transition{
                 min-width: auto;
                 height:250px;
                 display: flex;
@@ -121,13 +133,34 @@
             }
 
             #bottombox{
-                background-color: rgb(57, 52, 44);
+                background-color: #CEB03E;
                 min-height: auto;
                 width: 100%;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 align-items: center;
+                justify-content: space-evenly;
+                color:white;
+            }
+
+            .bottomphoto{
+                max-width: 800px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+
+            .textsize{
+                font-size: 15pt;
+            }
+
+            p{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 15pt;
+                line-height: 30px;
+                margin-top:-40px;
             }
 
         </style>
@@ -146,12 +179,12 @@
     
             <ul>
            
-            <li> <a href="index.html">HOME</a>
-            <li> <a href="invest.html">INVEST</a></li>
-            <li> <a href="about.html">ABOUT</a></li>
-            <li> <a href="consumerpage.html">CONSUMERS</a></li>
-            <li> <a href="foliaevents.html">EVENTS</a>
-                <li> <a href="contact.html">CONTACT</a>
+                <li> <a href="https://noychat.github.io/Folia-Website/index.html">HOME</a>
+                    <li> <a href="https://noychat.github.io/Folia-Website/invest.html">INVEST</a></li>
+                    <li> <a href="https://noychat.github.io/Folia-Website/FoliaAbout.html">ABOUT</a></li>
+                    <li> <a href="https://noychat.github.io/Folia-Website/consumerpage.html">CONSUMERS</a></li>
+                    <li> <a href="https://noychat.github.io/Folia-Website/foliaevents.html">EVENTS</a>
+                        <li> <a href="https://noychat.github.io/Folia-Website/contact.html">CONTACT</a>
 
     </div><!--close MENU-->
     </div>
@@ -166,12 +199,12 @@
                 <div id="maintextbox"> <!--box with text for main photo-->
                     <h3><span class="highlightme">Currated tea collections for fine restaurants</span></h3>
                     <h1>THE FINEST LEAVES TO ELEVATE YOUR DINING EXPERIENCE</h1>
-                    <input type="button" value="About Us" class="aboutbutton">
+                    <input type="button" value="Contact Us" class="contactbutton" href="https://noychat.github.io/Folia-Website/contact.html">
                 </div>
             </div>
             <br>
             <br>
-            <div id="transition">Our Services</div>
+            <div class="transition">Our Services</div>
             <div id="middlebox"><!--box for middle portion w/ services-->
                 
                 <div class="servicebox">
@@ -185,7 +218,7 @@
                     <br>
                     <br>
                     <br>
-                    We source our tea only from the best places.
+                    <span class="textsize">We source our tea only from the best places.</span>
                     <br>
                 </div>
                 <div class="servicebox">
@@ -199,7 +232,7 @@
                     <img src="packaging.png" class="icons">
                     <br>
                     <br>
-                    We package with gentle and organic materials.
+                    <span class="textsize">We package with gentle and organic materials.</span>
                     <br>
                 </div>
                 <div class="servicebox">
@@ -213,14 +246,31 @@
                     <img src="delivery.png" class="icons">
                     <br>
                     <br>
-                    We handle delivery with commitment to care.
+                    <span class="textsize">We handle delivery with commitment to care.</span>
                     <br>
                 </div>
             </div>
             <!--<div id="transition">Contact Us</div>-->
             <div id="bottombox">
-
+                
+                <div id="maintextbox2"> <!--box with text for main photo-->
+                    <span class="transition" style="color:white">About Us</span>
+                    
+                    <p>Only sourcing the finest leaves, Folia provides bespoke tea collections for elevated dining experiences. Our in-house sommeliers work with our partners to deliver distinct offerings for your business. Fill out the form below and we will be in contact with you shortly.</p>
+                
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <img src="foliamockup3.jpg" class="bottomphoto">
             </div>
+            
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </body>
 </html>
