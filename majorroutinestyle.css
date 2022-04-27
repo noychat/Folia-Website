@@ -153,59 +153,6 @@
 
 
 
-/* CAP */
-.tea-type {
-    margin-bottom: 30px;
-  }
-   
-  .choosecap div {
-    display: block;
-    margin-top: 10px;
-  }
-  .label{
-    width: 100px;
-    float: left;
-    text-align: left;
-    padding-right: 9px;
-}
-  .choosecap  input {
-    display: none;
-  }
-   
-  .choosecap  input+ label span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: -1px 4px 0 0;
-    vertical-align: middle;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-   
-  .choosecap  input + label span {
-    border: 4px solid RGB(94, 94, 76)
-  }
-   
-  .choosecap  input#light + label span {
-    background-color: #fae5a1;
-  }
-  .choosecap  input#dark + label span {
-    background-color: #161616;
-  }
-   
-  .choosecap  input:checked + label span {
-    background-image: url(check-icn.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-
-
-
-
-
-
-
 
 
 
