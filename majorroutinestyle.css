@@ -210,6 +210,9 @@
 
 
   /* Product Price */
+#amount{
+  margin-right: 5px;
+}
 .product-price {
     margin-top: 40px;
     display: flex;
