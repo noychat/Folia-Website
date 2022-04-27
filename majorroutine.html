@@ -82,12 +82,12 @@
                  
                         <div class="choosesize">
                           <div>
-                          <input data-image="small" type="radio" id="small" name="size" value="20" id="item1" checked> 
+                          <input data-image="small" type="radio" id="small" name="size" value="20" id="item1" class="radiogroup" checked> 
                             <label for="small"><span></span></label> 
                             <div class="label">8 oz</div>    
                           </div>
                           <div>
-                            <input data-image="big" type="radio" id="big" name="size" value="40" id="item2"> 
+                            <input data-image="big" type="radio" id="big" name="size" value="40" id="item2" class="radiogroup"> 
                             <label for="big"><span></span></label>
                             <div class="label">16 oz</div>    
                           </div>
@@ -101,17 +101,17 @@
                
                       <div class="choosetea">
                         <div>
-                        <input data-image="green" type="radio" id="green" name="color" value="0" checked> 
+                        <input data-image="green" type="radio" id="green" name="color" value="0" class="radiogroup" checked> 
                           <label for="green"><span></span></label> 
                           <div class="label">Green Tea</div>    
                         </div>
                         <div>
-                          <input data-image="chamomile" type="radio" id="chamomile" name="color" value="0"> 
+                          <input data-image="chamomile" type="radio" id="chamomile" name="color" class="radiogroup" value="0"> 
                           <label for="chamomile"><span></span></label>
                           <div class="label">Chamomile Tea</div>    
                         </div>
                         <div>
-                          <input data-image="oolong" type="radio" id="oolong" name="color" value="0">
+                          <input data-image="oolong" type="radio" id="oolong" name="color" class="radiogroup" value="0">
                           <label for="oolong"><span></span></label>
                           <div class="label">Oolong Tea</div>  
                         </div>
@@ -149,6 +149,7 @@
                   <div class="product-price">
                     <span>$49.99</span>
                     <a href="#" class="cart-btn" id="btnGo">Add To Cart</a>
+                    <input type="text" name="amount" id="amount" />
                   </div>
                 </div>
 </div><!--close CONTAINER-->
@@ -223,6 +224,12 @@ $('input[name="cap"]').on('change', function(){
     });
     
     alert(total);
+});
+
+
+$('.radiogroup').change(function(e){
+    var selectedValue = $(this).val();
+    $('#amount').val(selectedValue)
 });
 });
 </script>
