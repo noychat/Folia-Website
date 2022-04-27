@@ -1,0 +1,238 @@
+/* Basic Styling */
+   
+  .container {
+    width: 1200px;
+    top: 300px;
+    left: 50px;
+    padding: 15px;
+    display: flex;
+    position: absolute;
+  }
+
+  /* Columns */
+.columnleft {
+    width: 220%;
+    position: relative;
+    margin-left: 30px;
+  }
+   
+  .columnright {
+    width: 120%;
+    top: 10px;
+    margin-left: 80px;
+    display: block;
+  }
+
+
+  /* Left Column */
+.columnleft img {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+   
+  .columnleft img.active {
+    opacity: 1;
+  }
+
+
+  /* Product Description */
+.product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+
+  /* Product Color */
+.tea-type {
+    margin-bottom: 30px;
+  }
+   
+  .choosetea div {
+    display: block;
+    margin-top: 10px;
+  }
+  .label{
+    width: 150px;
+    float: left;
+    text-align: left;
+    padding-right: 9px;
+}
+  .choosetea  input {
+    display: none;
+  }
+   
+  .choosetea  input+ label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  .choosetea  input + label span {
+    border: 4px solid RGB(94, 94, 76)
+  }
+   
+  .choosetea  input#green + label span {
+    background-color: #90978b;
+ 
+  }
+  .choosetea  input#chamomile + label span {
+    background-color: #ffd4a1;
+  }
+  .choosetea  input#oolong + label span {
+    background-color: #948e9e;
+  }
+   
+  .choosetea  input:checked + label span {
+    background-image: url(check-icn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+
+/* SIZE */
+.tea-type {
+    margin-bottom: 30px;
+  }
+   
+  .choosesize div {
+    display: block;
+    margin-top: 10px;
+  }
+  .label{
+    width: 100px;
+    float: left;
+    text-align: left;
+    padding-right: 9px;
+}
+  .choosesize  input {
+    display: none;
+  }
+   
+  .choosesize  input+ label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  .choosesize  input + label span {
+    border: 4px solid RGB(94, 94, 76)
+  }
+   
+  .choosesize  input#small + label span {
+    background-color: #4172ec;
+  }
+  .choosesize  input#big + label span {
+    background-color: #fad660;
+  }
+   
+  .choosesize  input:checked + label span {
+    background-image: url(check-icn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+
+
+
+
+
+
+/* CAP */
+.tea-type {
+    margin-bottom: 30px;
+  }
+   
+  .choosecap div {
+    display: block;
+    margin-top: 10px;
+  }
+  .label{
+    width: 100px;
+    float: left;
+    text-align: left;
+    padding-right: 9px;
+}
+  .choosecap  input {
+    display: none;
+  }
+   
+  .choosecap  input+ label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  .choosecap  input + label span {
+    border: 4px solid RGB(94, 94, 76)
+  }
+   
+  .choosecap  input#light + label span {
+    background-color: #fae5a1;
+  }
+  .choosecap  input#dark + label span {
+    background-color: #161616;
+  }
+   
+  .choosecap  input:checked + label span {
+    background-image: url(check-icn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* Product Price */
+.product-price {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+   
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+  }
+   
+  .cart-btn {
+    display: inline-block;
+    background-color: RGB(94, 94, 76);
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .cart-btn:hover {
+    background-color: black;
+  }
