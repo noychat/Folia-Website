@@ -134,10 +134,10 @@
   }
    
   .choosesize  input#small + label span {
-    background-color: #4172ec;
+    background-color: rgb(22, 22, 22);
   }
   .choosesize  input#big + label span {
-    background-color: #fad660;
+    background-color: rgb(22, 22, 22);
   }
    
   .choosesize  input:checked + label span {
@@ -212,6 +212,7 @@
   /* Product Price */
 #amount{
   margin-right: 5px;
+  border-radius: 2px solid red;
 }
 .product-price {
     margin-top: 40px;
