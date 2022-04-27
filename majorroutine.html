@@ -1,0 +1,228 @@
+
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet"> 
+    <link href="file:///Users/noychatoyan/Desktop/majorroutinestyle.css" rel="stylesheet"> 
+    
+    <title>Tea Types</title>
+    
+    <style>
+
+
+    </style>
+    </head>
+   
+    <body>
+    
+        <div class="announcement">
+            <p>tea collections coming soon...</a></p>
+          </div>
+            <div id="navbar">
+            <div id="nav">
+            <div class="menu">
+            <div id="menu">
+        
+            <ul>
+           
+              <li> <a href="https://noychat.github.io/Folia-Website/index.html">HOME</a>
+                <li> <a href="https://noychat.github.io/Folia-Website/invest.html">INVEST</a></li>
+                <li> <a href="https://noychat.github.io/Folia-Website/FoliaAbout.html">ABOUT</a></li>
+                <li> <a href="https://noychat.github.io/Folia-Website/consumerpage.html">CONSUMERS</a></li>
+                <li> <a href="https://noychat.github.io/Folia-Website/foliaevents.html">EVENTS</a>
+                    <li> <a href="https://noychat.github.io/Folia-Website/contact.html">CONTACT</a>
+        
+        
+         </div><!--close MENU-->
+            </div>
+            </div>
+         <div id="logobox">
+            <img src="https://raw.githubusercontent.com/noychat/Folia-Website/main/folialogo.png?token=GHSAT0AAAAAABTDB3YXFXFCR7WTNUNPXGQUYS6M22A" alt="Folia Logo" id="logo">
+            </div>
+            </div><!--close all header portion-->
+
+
+<div class="container">
+ 
+                <!-- Left Column---Tea Images -->
+                <div class="columnleft">
+                  <img data-image="oolong" src="oolongbig.png" alt="">
+                  <img data-image="chamomile" src="chamomilebig.png" alt="">
+                  <img data-image="green" class="active" src="greenteabig.png" alt="">
+                  <img data-image="small" class="active" src="foliasmall.png" alt="">
+                  <img data-image="big" class="active" src="foliabig.png" alt="">
+                  
+                </div>
+               
+               
+                <!-- Right Column -->
+                <div class="columnright">
+               
+                  <!-- Product Description -->
+                  <div class="product-description">
+                    <span>Folia Tea Collection</span>
+                    <h1>Signature Teas</h1>
+                    <p>We source our tea leaves from around the world. Try our many selections of teas and you will taste the difference.</p>
+                  </div>
+               
+                  <!-- Product Configuration -->
+                  <div class="product-configuration">
+
+
+
+                     <!-- Tea Size -->
+                     <div class="tea-type">
+                        <h3>Size</h3>
+                 
+                        <div class="choosesize">
+                          <div>
+                          <input data-image="small" type="radio" id="small" name="size" value="20" id="item1" checked> 
+                            <label for="small"><span></span></label> 
+                            <div class="label">8 oz</div>    
+                          </div>
+                          <div>
+                            <input data-image="big" type="radio" id="big" name="size" value="40" id="item2"> 
+                            <label for="big"><span></span></label>
+                            <div class="label">16 oz</div>    
+                          </div>
+                 
+                      </div>
+                      <!--CLOSE TEA Size-->
+               
+                    <!-- Tea Type -->
+                    <div class="tea-type">
+                      <h3>Tea Type</h3>
+               
+                      <div class="choosetea">
+                        <div>
+                        <input data-image="green" type="radio" id="green" name="color" value="0" checked> 
+                          <label for="green"><span></span></label> 
+                          <div class="label">Green Tea</div>    
+                        </div>
+                        <div>
+                          <input data-image="chamomile" type="radio" id="chamomile" name="color" value="0"> 
+                          <label for="chamomile"><span></span></label>
+                          <div class="label">Chamomile Tea</div>    
+                        </div>
+                        <div>
+                          <input data-image="oolong" type="radio" id="oolong" name="color" value="0">
+                          <label for="oolong"><span></span></label>
+                          <div class="label">Oolong Tea</div>  
+                        </div>
+                      </div>
+               
+                    </div>
+                    <!--CLOSE TEA TYPE-->
+
+
+
+                    <!-- Cap Color -->
+                    <!-- <div class="tea-type">
+                        <h3>Cap Color</h3>
+                 
+                        <div class="choosecap">
+                          <div>
+                          <input data-image="dark" type="radio" id="dark" name="cap" value="Dark" checked> 
+                            <label for="dark"><span></span></label> 
+                            <div class="label">Dark</div>    
+                          </div>
+                          <div>
+                            <input data-image="light" type="radio" id="light" name="cap" value="light"> 
+                            <label for="light"><span></span></label>
+                            <div class="label">Light</div>    
+                          </div>
+                 
+                      </div> -->
+                      <!--CLOSE Cap Color -->
+                      
+                    
+               
+
+               
+                  <h3>Product Pricing</h3>
+                  <div class="product-price">
+                    <span>$49.99</span>
+                    <a href="#" class="cart-btn" id="btnGo">Add To Cart</a>
+                  </div>
+                </div>
+</div><!--close CONTAINER-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+<script>
+    $(document).ready(function() {
+ 
+ $('.choosetea input').on('click', function() {
+     var teatype = $(this).attr('data-image');
+
+     $('.active').removeClass('active');
+     $('.columnleft img[data-image = ' + teatype + ']').addClass('active');
+     $(this).addClass('active');
+ });
+
+ $('.choosesize input').on('click', function() {
+     var teatype = $(this).attr('data-image');
+
+     $('.active').removeClass('active');
+     $('.columnleft img[data-image = ' + teatype + ']').addClass('active');
+     $(this).addClass('active');
+ });
+
+ var radios = document.getElementsByName("color"); // list of radio buttons
+var val = localStorage.getItem('color'); // local storage value
+for(var i=0;i<radios.length;i++){
+  if(radios[i].value == val){
+      radios[i].checked = true; // marking the required radio as checked
+  }
+}
+$('input[name="color"]').on('change', function(){
+    localStorage.setItem('color', $(this).val());
+  
+  });
+
+
+
+  var radios = document.getElementsByName("size"); // list of radio buttons
+var val = localStorage.getItem('size'); // local storage value
+for(var i=0;i<radios.length;i++){
+  if(radios[i].value == val){
+      radios[i].checked = true; // marking the required radio as checked
+  }
+}
+$('input[name="size"]').on('change', function(){
+    localStorage.setItem('size', $(this).val());
+  
+  });
+
+
+  var radios = document.getElementsByName("cap"); // list of radio buttons
+var val = localStorage.getItem('cap'); // local storage value
+for(var i=0;i<radios.length;i++){
+  if(radios[i].value == val){
+      radios[i].checked = true; // marking the required radio as checked
+  }
+}
+$('input[name="cap"]').on('change', function(){
+    localStorage.setItem('cap', $(this).val());
+  
+  });
+
+
+
+//add to cart
+  $("#btnGo").click(function(){
+    var total=0;
+    $("input[type=radio]:checked").each(function(){
+        total+= parseInt($(this).attr("value"));
+    });
+    
+    alert(total);
+});
+});
+</script>
+
+
+
+</body>
+</html>
