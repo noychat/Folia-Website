@@ -20,7 +20,7 @@
     border-radius: 6px;
     font-size: 20px;
     color: RGB(94, 94, 76);
-    width: 50px;
+    width: 55px;
     height: 40px;
     padding-left: 10px;
     transition: all .5s;
@@ -67,7 +67,10 @@
                   <img data-image="chamomile" src="https://noychat.github.io/Folia-Website/chamomilebig.png" alt="">
                   <img data-image="green" class="active" src="https://noychat.github.io/Folia-Website/greenteabig.png" alt="">
                   <img data-image="small" class="active" src="https://noychat.github.io/Folia-Website/foliasmall.png" alt="">
-                  <img data-image="big" class="active" src="https://noychat.github.io/Folia-Website/foliabig.png" alt="">
+                  <img data-image="big"  src="https://noychat.github.io/Folia-Website/foliabig.png" alt="">
+
+                  <img data-image1="small_chamomile"  src="chamomilesmall.png" alt="">
+                  
                   
                 </div>
                
@@ -112,7 +115,7 @@
                
                       <div class="choosetea">
                         <div>
-                        <input data-image="green" type="radio" id="green" name="color" value="0" class="radios2" checked> 
+                        <input data-image="green" data-image1="small_chamomile" type="radio" id="green" name="color" value="0" class="radios2" checked> 
                           <label for="green"><span></span></label> 
                           <div class="label">Green Tea</div>    
                         </div>
@@ -158,11 +161,14 @@
                
                   <h3>Product Pricing</h3>
                   <div class="product-price">
-                    <input type="text" name="amount" id="amount">
+                    <input type="text" name="amount" id="amount" >
                     <a href="#" class="cart-btn" id="btnGo">Add To Cart</a>
                   
                   </div>
                 </div>
+
+
+                
 </div><!--close CONTAINER-->
 
 
@@ -185,6 +191,21 @@
      $('.columnleft img[data-image = ' + teatype + ']').addClass('active');
      $(this).addClass('active');
  });
+
+ 
+if (".choosesize input".checked && ".choosetea input".checked){
+  $('.choosetea input').on('click', function() {
+     var teatype = $(this).attr('data-image1');
+
+     $('.active').removeClass('active');
+     $('.columnleft img[data-image1 = ' + teatype + ']').addClass('active');
+     $(this).addClass('active');
+ });
+}
+
+
+
+
 
  var radios = document.getElementsByName("color"); // list of radio buttons
 var val = localStorage.getItem('color'); // local storage value
@@ -227,21 +248,20 @@ $('input[name="cap"]').on('change', function(){
 
 
 
-//add to cart
-  $("#btnGo").click(function(){
-    var total=0;
-    $("input[type=radio]:checked").each(function(){
-        total+= parseInt($(this).attr("value"));
-    });
+// //add to cart
+//   $("#btnGo").click(function(){
+//     var total=0;
+//     $("input[type=radio]:checked").each(function(){
+//         total+= parseInt($(this).attr("value"));
+//     });
     
-    alert(total);
-});
+// });
 
-
+// add the value of the added radio boxes in the text box
 $('.radios1').change(function(e){
     var selectedValue = parseInt($(this).val());
     selectedValue += parseInt($(".radios2").val());
-    $('#amount').val(selectedValue)
+    $('#amount').val('$' + selectedValue)
 
 });
 });
