@@ -134,10 +134,10 @@
   }
    
   .choosesize  input#small + label span {
-    background-color: #4172ec;
+    background-color: #252525;
   }
   .choosesize  input#big + label span {
-    background-color: #fad660;
+    background-color: #1d1d1d;
   }
    
   .choosesize  input:checked + label span {
