@@ -75,7 +75,8 @@
 	/* border: 1px solid blue; */
 	position: relative;
 	margin: auto;
-	width: 150px;
+	width: 80%;
+	height: 10%;
 }
 
 .announcement {
