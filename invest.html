@@ -2,7 +2,7 @@
 
 <head>
     <title>Investing</title>
-    <link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet">
+    <link href="MenuStyleSheet.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
     <style>
@@ -30,15 +30,17 @@
 
         #textbox2 {
             color: black;
-            background-color: red;
             font-size: 15pt;
             font-family: 'Josefin Sans', sans-serif;
-            margin-top: 5em;
-            margin-left: 450px;
-            margin-right: 450px;
-            position: absolute;
-            float: left;
+            padding-top: 3em;
+            width: 50%;
+            margin: auto;
             line-height: 30px;
+        }
+
+        .outercontainer {
+            height: 1400px;
+            background-color: #F3F1EB;
         }
 
         #fieldimage {
@@ -72,7 +74,7 @@
 
         <div id="textbox2">
 
-            <h1>Help us to keep Folia brewing!</h1>
+            <h1><strong>Help us to keep Folia brewing!</strong></h1>
 
             <h2>Where we are right now:</h2>
             <p>Referencing the P/L ratio, total revenue, and income statements of our competitors (Art of Tea, Tazo), we
@@ -101,5 +103,24 @@
     </div> <!-- Outercontainer -->
 
 </body>
+
+<style>
+    @media only screen and (max-width:1400px) {
+
+        /* For tablets: */
+        #textbox2 {
+            width:80%;
+        }
+
+    }
+
+    @media only screen and (max-width:800px) {
+
+        /* For mobile: */
+        #textbox2 {
+            width:85%;
+        }
+    }
+</style>
 
 </html>
