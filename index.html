@@ -156,7 +156,7 @@
                 font-size: 15pt;
             }
 
-            p{
+            #pp{
                 font-family: 'Josefin Sans', sans-serif;
                 font-size: 15pt;
                 line-height: 30px;
@@ -164,9 +164,12 @@
             }
 
         </style>
-        <script>
-
-        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script> 
+  $(function(){
+    $("#header").load("https://noychat.github.io/Folia-Website/foliaheader.html"); 
+  });
+  </script> 
     </head>
     <body>
         <div class="announcement">
@@ -190,7 +193,7 @@
     </div>
     </div>
     <div id="logobox">
-        <img src="https://raw.githubusercontent.com/noychat/Folia-Website/main/folialogo.png?token=GHSAT0AAAAAABTDB3YXFXFCR7WTNUNPXGQUYS6M22A" alt="Folia Logo" id="logo">
+        <img src="folia.gif" height="100px" alt="Folia Logo" id="logo">
     </div>
 </div><!--close all header portion-->
         <div id="outercontainer">
@@ -256,7 +259,7 @@
                 <div id="maintextbox2"> <!--box with text for main photo-->
                     <span class="transition" style="color:white">About Us</span>
                     
-                    <p>Only sourcing the finest leaves, Folia provides bespoke tea collections for elevated dining experiences. Our in-house sommeliers work with our partners to deliver distinct offerings for your business. Fill out the form below and we will be in contact with you shortly.</p>
+                    <p id="pp">Only sourcing the finest leaves, Folia provides bespoke tea collections for elevated dining experiences. Our in-house sommeliers work with our partners to deliver distinct offerings for your business. Fill out the form below and we will be in contact with you shortly.</p>
                 
                     <br>
                     <br>
