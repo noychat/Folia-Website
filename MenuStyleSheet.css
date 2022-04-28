@@ -105,16 +105,16 @@
 }
 
 .announcement {
-display: inline-block;
-height: 30px;
-text-align: center;
-width: 100%;
-background-color: rgb(94, 94, 76);
-color: white;
-padding-bottom: 6px;
-vertical-align: center;
-font-size: 0.8em;
-font-family: 'Avenir';
+	display: inline-block;
+	height: 30px;
+	text-align: center;
+	width: 100%;
+	background-color: rgb(94, 94, 76);
+	color: white;
+	padding-bottom: 6px;
+	vertical-align: center;
+	font-size: 0.8em;
+	font-family: 'Avenir';
 
 }
 
