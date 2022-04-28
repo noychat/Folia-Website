@@ -28,6 +28,24 @@
     transition: all .5s;
 }
 
+#shoppingcart{
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+}
+
+#item{
+  margin-right: 10px;
+  display: inline-block;
+    border-radius: 2px solid RGB(94, 94, 76);
+    border-radius: 6px;
+    font-size: 20px;
+    color: RGB(94, 94, 76);
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    transition: all .5s;
+}
     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script> 
@@ -45,13 +63,15 @@
  
                 <!-- Left Column---Tea Images -->
                 <div class="columnleft">
-                  <img data-image="oolong" src="https://noychat.github.io/Folia-Website/oolongbig.png" alt="">
-                  <img data-image="chamomile" src="https://noychat.github.io/Folia-Website/chamomilebig.png" alt="">
-                  <img data-image="green" class="active" src="https://noychat.github.io/Folia-Website/greenteabig.png" alt="">
-                  <img data-image="small" class="active" src="https://noychat.github.io/Folia-Website/foliasmall.png" alt="">
-                  <img data-image="big"  src="https://noychat.github.io/Folia-Website/foliabig.png" alt="">
+                  <img data-image="oolong" src="https://noychat.github.io/Folia-Website/oolongbig.png" alt=" Big Oolong Can">
+                  <img data-image="chamomile" src="https://noychat.github.io/Folia-Website/chamomilebig.png" alt="Big Chamomile Can">
+                  <img data-image="green" class="active" src="https://noychat.github.io/Folia-Website/greenteabig.png" alt="Big Green Tea Can">
+                  <img data-image="small" class="active" src="https://noychat.github.io/Folia-Website/foliasmall.png" alt="Small Example Can">
+                  <img data-image="big"  src="https://noychat.github.io/Folia-Website/foliabig.png" alt="Big Example Can">
 
-                  <img data-image1="small_chamomile"  src="chamomilesmall.png" alt="">
+                  <img data-image1="small_chamomile"  src="https://noychat.github.io/Folia-Website/chamomilesmall.png" alt="Small Chamomile Can">
+                  <img data-image1="small_oolong"  src="https://noychat.github.io/Folia-Website/oolongsmall.png" alt="Small Oolong Can">
+                  <img data-image1="small_green"  src="https://noychat.github.io/Folia-Website/greenteasmall.png" alt="Small Green Tea Can">
                   
                   
                 </div>
@@ -97,17 +117,17 @@
                
                       <div class="choosetea">
                         <div>
-                        <input data-image="green" data-image1="small_chamomile" type="radio" id="green" name="color" value="0" class="radios2" checked> 
+                        <input data-image="green" data-image1="small_green" type="radio" id="green" name="color" value="0" class="radios2" checked> 
                           <label for="green"><span></span></label> 
                           <div class="label">Green Tea</div>    
                         </div>
                         <div>
-                          <input data-image="chamomile" type="radio" id="chamomile" name="color" class="radios2" value="0"> 
+                          <input data-image="chamomile" data-image1="small_chamomile" type="radio" id="chamomile" name="color" class="radios2" value="0"> 
                           <label for="chamomile"><span></span></label>
                           <div class="label">Chamomile Tea</div>    
                         </div>
                         <div>
-                          <input data-image="oolong" type="radio" id="oolong" name="color" class="radios2" value="0">
+                          <input data-image="oolong" data-image1="small_oolong" type="radio" id="oolong" name="color" class="radios2" value="0">
                           <label for="oolong"><span></span></label>
                           <div class="label">Oolong Tea</div>  
                         </div>
@@ -116,35 +136,12 @@
                     </div>
                     <!--CLOSE TEA TYPE-->
 
-
-
-                    <!-- Cap Color -->
-                    <!-- <div class="tea-type">
-                        <h3>Cap Color</h3>
-                 
-                        <div class="choosecap">
-                          <div>
-                          <input data-image="dark" type="radio" id="dark" name="cap" value="Dark" checked> 
-                            <label for="dark"><span></span></label> 
-                            <div class="label">Dark</div>    
-                          </div>
-                          <div>
-                            <input data-image="light" type="radio" id="light" name="cap" value="light"> 
-                            <label for="light"><span></span></label>
-                            <div class="label">Light</div>    
-                          </div>
-                 
-                      </div> -->
-                      <!--CLOSE Cap Color -->
-                      
-                    
-               
-
+          
                
                   <h3>Product Pricing</h3>
                   <div class="product-price">
                     <input type="text" name="amount" id="amount" >
-                    <a href="#" class="cart-btn" id="btnGo">Add To Cart</a>
+                    <a href="#" class="cart-btn" id="cartbutton">Add To Cart</a>
                   
                   </div>
                 </div>
@@ -152,6 +149,10 @@
 
                 
 </div><!--close CONTAINER-->
+
+<div id="shoppingcart">
+<div> <input type="text" name="amount" id="item" ></div>
+</div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
@@ -176,24 +177,24 @@
 
  
 if (".choosesize input".checked && ".choosetea input".checked){
-  $('.choosetea input').on('click', function() {
+ 
      var teatype = $(this).attr('data-image1');
 
      $('.active').removeClass('active');
      $('.columnleft img[data-image1 = ' + teatype + ']').addClass('active');
      $(this).addClass('active');
- });
-}
+ };
 
 
 
 
 
- var radios = document.getElementsByName("color"); // list of radio buttons
-var val = localStorage.getItem('color'); // local storage value
+//local storage color
+ var radios = document.getElementsByName("color"); 
+var val = localStorage.getItem('color'); 
 for(var i=0;i<radios.length;i++){
   if(radios[i].value == val){
-      radios[i].checked = true; // marking the required radio as checked
+      radios[i].checked = true; 
   }
 }
 $('input[name="color"]').on('change', function(){
@@ -202,12 +203,12 @@ $('input[name="color"]').on('change', function(){
   });
 
 
-
-  var radios = document.getElementsByName("size"); // list of radio buttons
-var val = localStorage.getItem('size'); // local storage value
+//local storage size
+  var radios = document.getElementsByName("size"); 
+var val = localStorage.getItem('size'); 
 for(var i=0;i<radios.length;i++){
   if(radios[i].value == val){
-      radios[i].checked = true; // marking the required radio as checked
+      radios[i].checked = true; 
   }
 }
 $('input[name="size"]').on('change', function(){
@@ -216,28 +217,8 @@ $('input[name="size"]').on('change', function(){
   });
 
 
-  var radios = document.getElementsByName("cap"); // list of radio buttons
-var val = localStorage.getItem('cap'); // local storage value
-for(var i=0;i<radios.length;i++){
-  if(radios[i].value == val){
-      radios[i].checked = true; // marking the required radio as checked
-  }
-}
-$('input[name="cap"]').on('change', function(){
-    localStorage.setItem('cap', $(this).val());
   
-  });
 
-
-
-// //add to cart
-//   $("#btnGo").click(function(){
-//     var total=0;
-//     $("input[type=radio]:checked").each(function(){
-//         total+= parseInt($(this).attr("value"));
-//     });
-    
-// });
 
 // add the value of the added radio boxes in the text box
 $('.radios1').change(function(e){
@@ -246,6 +227,9 @@ $('.radios1').change(function(e){
     $('#amount').val('$' + selectedValue)
 
 });
+
+//add to cart
+
 });
 </script>
 
