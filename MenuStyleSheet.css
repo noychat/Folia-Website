@@ -59,11 +59,12 @@
 	height: 100px;
 	display: flex;
 }
+
 #nav {
 	margin-top: 40px;
 }
 .menu {
-	/* border: 1px solid green;  */
+	/* border: 1px solid green; */
 	height: 20px;
 	width: 600px;
 	float: left;
@@ -107,7 +108,29 @@
 
 @media only screen and (max-width: 1400px) {
 	/* For tablets: */
+	.menu {
+		padding-top: 80px;
+		margin-left: 90px;
+	}
+
+	#navbar {
+		height: 180px;
+	}
+
+	#logobox {
+		padding-top: 30px;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	/* For mobile: */
 	#textbox2 {
-		width: 80%;
+		width: 85%;
 	}
 }
