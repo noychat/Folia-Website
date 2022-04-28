@@ -6,18 +6,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
     <style>
-        #outercontainer {
+        .outercontainer {
             height: 1400px;
             background-color: #F3F1EB;
-        }
-
-        #mockup1 {
-            float: left;
-            width: 1000px;
-            height: 350px;
-            margin-top: 60px;
-            margin-left: 100px;
-            position: absolute;
         }
 
         h1 {
@@ -59,48 +50,47 @@
 
         }
 
-        #contactbox {
-            background-color: white;
-            height: 200px;
-            width: 1000px;
-            color: black;
-            font-family: 'Josefin Sans', sans-serif;
-
-            margin-top: 1220px;
-            margin-left: 370px;
-            position: absolute;
-            border-radius: 10px;
-            padding-left: 40px;
-            padding-right: 40px;
-            padding-top: 10px;
-            text-align: center;
-        }
-
-        #contactimage {
-            margin-top: 1300px;
-            height: 110px;
-            width: 760px;
-            margin-left: 520px;
-            position: absolute;
-        }
-
         p {
             font-family: 'Josefin Sans', sans-serif;
         }
     </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script> 
-  $(function(){
-    $("#header").load("https://noychat.github.io/Folia-Website/foliaheader.html"); 
-  });
-</script>
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("https://noychat.github.io/Folia-Website/foliaheader.html");
+        });
+    </script>
+
 </head>
 
 <body>
-   
-<div id="header"></div>
-    <div id="outercontainer">
+
+    <div class="announcement">
+        <p>tea collections coming soon...</a></p>
+    </div>
+    <div id="navbar">
+        <div id="nav">
+            <div class="menu">
+                <div id="menu">
+
+                    <ul>
+
+                        <li> <a href="https://noychat.github.io/Folia-Website/index.html">HOME</a>
+                        <li> <a href="https://noychat.github.io/Folia-Website/invest.html">INVEST</a></li>
+                        <li> <a href="https://noychat.github.io/Folia-Website/FoliaAbout.html">ABOUT</a></li>
+                        <li> <a href="https://noychat.github.io/Folia-Website/consumerpage.html">CONSUMERS</a></li>
+                        <li> <a href="https://noychat.github.io/Folia-Website/foliaevents.html">EVENTS</a>
+                        <li> <a href="https://noychat.github.io/Folia-Website/contact.html">CONTACT</a>
+
+                </div>
+                <!--close MENU-->
+            </div>
+        </div>
+        <div id="logobox">
+            <img src="folia.gif" height="100px" alt="Folia Logo" id="logo">
+        </div>
+    </div>
+    <div class="outercontainer">
 
         <div id="textbox2">
 
@@ -126,7 +116,7 @@
             <p>We also plan to set aside 15-20% of the funds for an emergency occurrences that may happen during the
                 operation of Folia Tea so we can continue running the company. Our team also plans to put another 5-10%
                 to the side to pay for business insurance and any other insurances we may need. This is crucial to our
-                company</p>
+                company.</p>
             <br><br>
 
             <br><br>
