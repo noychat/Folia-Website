@@ -29,11 +29,6 @@
 	color: rgb(94, 94, 76);
 }
 
-ul {
-	padding: 0;
-	margin: 0;
-}
-
 #menu ul ul {
 	position: absolute;
 	top: 30px;
@@ -143,4 +138,9 @@ ul {
 		padding-top: 80px;
 		margin-left: 0px;
 	}
+
+	#menu li a {
+		width: 76px;
+	}
+
 }
