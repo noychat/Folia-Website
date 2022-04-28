@@ -26,11 +26,37 @@ color: 000000;
   
 }
 
+.columnsmall {
+  float: left;
+  width: 20%;
+  min-height: auto; 
+ 
+color: 000000;
+  
+}
 
 
 
 .row{
     margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rowsmall{
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rowteam{
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 10%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -109,11 +135,46 @@ p{
 
 
    <div class="column" style="background-color:#ffffff;">
-    <img src="f3e032_d9ada03b588f4ff8a597c6b8f31dd972_mv2.jpeg" alt="Tea2" width="100%" >
+    <img src="f3e032_d9ada03b588f4ff8a597c6b8f31dd972_mv2.png" alt="Tea2" width="100%" >
    
   </div>
 </div>
 
+<div class="rowsmall">
+  <h1 style="font-size: 60pt;"> Our Team</h1>
+</div>
+
+<div class="rowteam">
+  <div class="columnsmall">
+    <img src="istockphoto-515660465-612x612.jpg"alt="person 1" style="width: 20%;">
+    <h3>Name</h3>
+    <p>Role</p>
+  </div>
+
+  <div class="columnsmall">
+    <img src="istockphoto-515660465-612x612.jpg" alt="person 2" style="width: 20%;">
+    <h3>Name</h3>
+    <p>Role</p>
+  </div>
+
+  <div class="columnsmall">
+    <img src="istockphoto-515660465-612x612.jpg" alt="person 3" style="width: 20%;">
+    <h3>Name</h3>
+    <p>Role</p>
+  </div>
+
+  <div class="columnsmall">
+    <img src="istockphoto-515660465-612x612.jpg" alt="person 4" style="width: 20%;">
+    <h3>Name</h3>
+    <p>Role</p>
+  </div>
+
+  <div class="columnsmall">
+    <img src="istockphoto-515660465-612x612.jpg" alt="person 5" style="width: 20%;">
+    <h3>Name</h3>
+    <p>Role</p>
+  </div>
+</div>
 
 </body>
 </html>
