@@ -1,121 +1,95 @@
-
-
-#menu *{
+#menu * {
 	margin: 0;
-	padding:0;
-        font-family: 'Avenir';
-        font-weight: normal;
-        font-style: normal;
-		font-size: 10pt;
+	padding: 0;
+	font-family: "Avenir";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 10pt;
 }
 
-#menu li{
+#menu li {
 	position: relative;
 	float: left;
 	list-style: none;
 }
 
-
-#menu li a{
-	width:90px;
+#menu li a {
+	width: 90px;
 	height: 30px;
 	display: block;
-	text-decoration:none;
+	text-decoration: none;
 	text-align: center;
 	line-height: 30px;
 	/* background-color: rgb(226, 112, 58); */
 	color: black;
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
-#menu li a:hover{
+#menu li a:hover {
 	color: rgb(94, 94, 76);
 }
 
-
-
-#menu ul ul{
+#menu ul ul {
 	position: absolute;
 	top: 30px;
 	visibility: hidden;
 }
 
-#menu ul ul ul{
+#menu ul ul ul {
 	position: absolute;
-	top: 0px; left:100px;
+	top: 0px;
+	left: 100px;
 	visibility: hidden;
 }
 
-
-
-#menu ul li:hover ul{
-	visibility:visible;
+#menu ul li:hover ul {
+	visibility: visible;
 }
 
-#menu ul li:hover ul ul{
-	visibility:hidden;
+#menu ul li:hover ul ul {
+	visibility: hidden;
 }
 
-#menu ul ul li:hover ul{
-	visibility:visible;
+#menu ul ul li:hover ul {
+	visibility: visible;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#navbar{
+#navbar {
 	/* border: 1px solid red; */
 	height: 100px;
 	display: flex;
-	padding-top: 30px;
 }
-#nav{
-   margin-top: 40px;
+
+#nav {
+	margin-top: 40px;
 }
-.menu{
-	/* border: 1px solid green;  */
+.menu {
+	/* border: 1px solid green; */
 	height: 20px;
 	width: 600px;
 	float: left;
 	position: absolute;
 }
 
-#logobox{
+#logobox {
 	/* border: 1px solid blue; */
-	height: 50px;
-	width: 200px;
-	float: left;
-	position: absolute;
-	margin-left: 720px;
-	
-}
-#logo{
-	width: 100%;
+	position: relative;
+	margin: auto;
+	width: 80%;
+	height: 10%;
 }
 
 .announcement {
-display: inline-block;
-height: 30px;
-text-align: center;
-width: 100%;
-background-color: rgb(94, 94, 76);
-color: white;
-padding-bottom: 6px;
-vertical-align: center;
-font-size: 0.8em;
-font-family: 'Avenir';
-
+	display: inline-block;
+	height: 30px;
+	text-align: center;
+	width: 100%;
+	background-color: rgb(94, 94, 76);
+	color: white;
+	padding-bottom: 6px;
+	vertical-align: center;
+	font-size: 0.8em;
+	font-family: "Avenir";
 }
 
 .footer {
@@ -128,11 +102,46 @@ font-family: 'Avenir';
 	padding-bottom: 6px;
 	vertical-align: center;
 	font-size: 0.8em;
-	font-family: 'Avenir';
+	font-family: "Avenir";
 	position: fixed;
 	margin-top: 780px;
+}
+
+@media only screen and (max-width: 1400px) {
+	/* For tablets: */
+	.menu {
+		padding-top: 80px;
+		margin-left: 90px;
 	}
 
+	#navbar {
+		height: 180px;
+	}
 
+	#logobox {
+		padding-top: 30px;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+}
 
+@media only screen and (max-width: 800px) {
+	/* For mobile: */
+	#textbox2 {
+		width: 85%;
+	}
 
+	.menu {
+		padding-top: 80px;
+		margin-left: 0px;
+	}
+
+	#menu li a {
+		width: 76px;
+	}
+
+}
