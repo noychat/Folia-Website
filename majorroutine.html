@@ -29,14 +29,14 @@
 }
 
 #shoppingcart{
-  width: 300px;
+  width: 330px;
   height: 300px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
-#item{
+.item{
   margin-right: 10px;
-  display: inline-block;
+
     border-radius: 2px solid RGB(94, 94, 76);
     border-radius: 6px;
     font-size: 20px;
@@ -45,6 +45,19 @@
     height: 30px;
     padding-left: 10px;
     transition: all .5s;
+    float: left;
+}
+.item1{
+  margin-right: 10px;
+    border-radius: 2px solid RGB(94, 94, 76);
+    border-radius: 6px;
+    font-size: 20px;
+    color: RGB(94, 94, 76);
+    width: 55px;
+    height: 30px;
+    padding-left: 10px;
+    transition: all .5s;
+    float: right;
 }
     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -98,7 +111,7 @@
                  
                         <div class="choosesize">
                           <div>
-                          <input data-image="small" type="radio" id="small" name="size" value="20" class="radios1" checked> 
+                          <input data-image="small" type="radio" id="small" name="size" value="20" class="radios1" > 
                             <label for="small"><span></span></label> 
                             <div class="label">8 oz</div>    
                           </div>
@@ -117,17 +130,17 @@
                
                       <div class="choosetea">
                         <div>
-                        <input data-image="green" data-image1="small_green" type="radio" id="green" name="color" value="0" class="radios2" checked> 
+                        <input data-image="green" data-image1="small_green" type="radio" id="green" name="color" value="0" class="radios2" > 
                           <label for="green"><span></span></label> 
                           <div class="label">Green Tea</div>    
                         </div>
                         <div>
-                          <input data-image="chamomile" data-image1="small_chamomile" type="radio" id="chamomile" name="color" class="radios2" value="0"> 
+                          <input data-image="chamomile" data-image1="small_chamomile" type="radio" id="chamomile" name="color" class="radios2" value="1"> 
                           <label for="chamomile"><span></span></label>
                           <div class="label">Chamomile Tea</div>    
                         </div>
                         <div>
-                          <input data-image="oolong" data-image1="small_oolong" type="radio" id="oolong" name="color" class="radios2" value="0">
+                          <input data-image="oolong" data-image1="small_oolong" type="radio" id="oolong" name="color" class="radios2" value="2">
                           <label for="oolong"><span></span></label>
                           <div class="label">Oolong Tea</div>  
                         </div>
@@ -141,7 +154,8 @@
                   <h3>Product Pricing</h3>
                   <div class="product-price">
                     <input type="text" name="amount" id="amount" >
-                    <a href="#" class="cart-btn" id="cartbutton">Add To Cart</a>
+                    <button type="button" class="cart-btn" id="cartbutton" name="cart" value="5">Add To Cart!</button>
+                
                   
                   </div>
                 </div>
@@ -151,7 +165,17 @@
 </div><!--close CONTAINER-->
 
 <div id="shoppingcart">
-<div id="itemdv" style="display: none"> <input type="text" name="amount" id="item" ></div>
+  <h3>Shopping Cart</h3>
+  <h5>Item and Price</h5>
+  <div id="itemscart">
+<div id="itemdv1A" style="display: none"> <input type="text" name="amount" class="item" value="8oz Green Tea"></div>
+<div id="itemdv2A" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
+
+<div id="itemdv1B" style="display: none"> <input type="text" name="amount" class="item" value="8oz Chamomile Tea"></div>
+<div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$21"></div>
+
+<button style="display: none" type="button" class="cart-btn" id="yourbutton" name="remove" value="10">x</button>
+</div>
 </div>
 
 
@@ -243,15 +267,15 @@ $('.radios1').change(function(e){
     });
 
 
-    $(function () {
-        $("#small".checked && "#green".checked).click(function () {
-            if ($("input[name=size]").is("#small") && ($("input[name=color").is("#green"))) {
-                $("#itemdv").show();
-            } else {
-                $("#itemdv").hide();
-            }
-        });
-    });
+    // $(function () {
+    //     $("#small".checked && "#green".checked).click(function () {
+    //         if ($("input[name=size]").is("#small") && ($("input[name=color").is("#green"))) {
+    //             $("#itemdv").show();
+    //         } else {
+    //             $("#itemdv").hide();
+    //         }
+    //     });
+    // });
     
     
     // $(function () {
@@ -264,12 +288,45 @@ $('.radios1').change(function(e){
     //     });
     // });
 
-//     function response(){
-//   if(document.getElementById("#small").checked && document.getElementById("#green").checked){
-//       document.getElementById("#itemdiv").style.display="visible";
-//   }else{
-// }
-//     }
+
+
+
+
+
+
+
+const sizeSelector = 'input:radio[name=size]';
+const colorSelector = 'input:radio[name=color]';
+const cartSelector = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+
+
+const SMALL = 20;
+const GREEN = 0;
+const CARTBUTTON = 5;
+
+function validityCheck() {
+  let $size = $(`${sizeSelector}`);
+  let $color = $(`${colorSelector}`);
+  
+  let size_flag = $size.is(':checked');
+  let color_flag = $color.is(':checked');
+
+  $('#itemdv1A').toggle(size_flag && color_flag) && $('#itemdv2A').toggle(size_flag && color_flag) && $('#yourbutton').toggle(size_flag && color_flag);
+
+}
+
+});
+
+document.querySelector('#yourbutton').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
 
 </script>
 
