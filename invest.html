@@ -2,7 +2,7 @@
 
 <head>
     <title>Investing</title>
-    <link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet">
+    <link href="MenuStyleSheet.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
     <style>
@@ -32,12 +32,15 @@
             color: black;
             font-size: 15pt;
             font-family: 'Josefin Sans', sans-serif;
-            margin-top: 5em;
-            margin-left: 450px;
-            margin-right: 450px;
-            position: absolute;
-            float: left;
+            padding-top: 3em;
+            width: 50%;
+            margin: auto;
             line-height: 30px;
+        }
+
+        .outercontainer {
+            height: 1400px;
+            background-color: #F3F1EB;
         }
 
         #fieldimage {
@@ -65,36 +68,13 @@
 
 <body>
 
-    <div class="announcement">
-        <p>tea collections coming soon...</a></p>
-    </div>
-    <div id="navbar">
-        <div id="nav">
-            <div class="menu">
-                <div id="menu">
-
-                    <ul>
-
-                        <li> <a href="https://noychat.github.io/Folia-Website/index.html">HOME</a>
-                        <li> <a href="https://noychat.github.io/Folia-Website/invest.html">INVEST</a></li>
-                        <li> <a href="https://noychat.github.io/Folia-Website/FoliaAbout.html">ABOUT</a></li>
-                        <li> <a href="https://noychat.github.io/Folia-Website/consumerpage.html">CONSUMERS</a></li>
-                        <li> <a href="https://noychat.github.io/Folia-Website/foliaevents.html">EVENTS</a>
-                        <li> <a href="https://noychat.github.io/Folia-Website/contact.html">CONTACT</a>
-
-                </div>
-                <!--close MENU-->
-            </div>
-        </div>
-        <div id="logobox">
-            <img src="folia.gif" height="100px" alt="Folia Logo" id="logo">
-        </div>
-    </div>
+    <div id="header"></div>
+    <!--close all header portion-->
     <div class="outercontainer">
 
         <div id="textbox2">
 
-            <h1>Help us to keep Folia brewing!</h1>
+            <h1><strong>Help us to keep Folia brewing!</strong></h1>
 
             <h2>Where we are right now:</h2>
             <p>Referencing the P/L ratio, total revenue, and income statements of our competitors (Art of Tea, Tazo), we
@@ -117,25 +97,30 @@
                 operation of Folia Tea so we can continue running the company. Our team also plans to put another 5-10%
                 to the side to pay for business insurance and any other insurances we may need. This is crucial to our
                 company.</p>
-            <br><br>
-
-            <br><br>
 
         </div> <!-- offers textbox-->
-
-        <!--<img id="fieldimage" src="fieldsimage.jpg" alt="field background image">
-
-            <div id="contactbox">
-               <h1 id="h2" style="font-size: 20px; color: rgb(63, 61, 61);">Contact us regarding any business inquiries: </h1> 
-            </div>
-
-            <img id="contactimage" src="contact.png" alt="contact info image">-->
-
-
-
 
     </div> <!-- Outercontainer -->
 
 </body>
+
+<style>
+    @media only screen and (max-width:1400px) {
+
+        /* For tablets: */
+        #textbox2 {
+            width:80%;
+        }
+
+    }
+
+    @media only screen and (max-width:800px) {
+
+        /* For mobile: */
+        #textbox2 {
+            width:85%;
+        }
+    }
+</style>
 
 </html>
