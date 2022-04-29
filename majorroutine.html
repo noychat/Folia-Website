@@ -29,7 +29,7 @@
 }
 
 #shoppingcart{
-  width: 330px;
+  width: 360px;
   height: 300px;
   /* border: 1px solid red; */
 }
@@ -57,7 +57,7 @@
     height: 30px;
     padding-left: 10px;
     transition: all .5s;
-    float: right;
+    
 }
     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -171,10 +171,10 @@
 <div id="itemdv1A" style="display: none"> <input type="text" name="amount" class="item" value="8oz Green Tea"></div>
 <div id="itemdv2A" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
 
-<div id="itemdv1B" style="display: none"> <input type="text" name="amount" class="item" value="8oz Chamomile Tea"></div>
+<div id="itemdv1B" style="display: none" > <input type="text" name="amount" class="item" value="8oz Chamomile Tea"></div>
 <div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$21"></div>
 
-<button style="display: none" type="button" class="cart-btn" id="yourbutton" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton" name="remove" value="10">x</button>
 </div>
 </div>
 
@@ -202,25 +202,7 @@
      $(this).addClass('active');
  });
 
- 
-// if (".choosesize.radios1 input" && ".choosetea input"){
- 
-//      var teatype = $(".choosetea").attr('data-image1');
 
-//      $('.active').removeClass('active');
-//      $('.columnleft img[data-image1 = ' + teatype + ']').addClass('active');
-//      $(this).addClass('active');
-//  };
-
-
-
-// $('.item1').on('click', function() {
-//      var teatype = $(this).attr('data-image1');
-
-//      $('.active').removeClass('active');
-//      $('.columnleft img[data-image1 = ' + teatype + ']').addClass('active');
-//      $(this).addClass('active');
-//  });
 
 
 //local storage color
@@ -267,36 +249,9 @@ $('.radios1').change(function(e){
     });
 
 
-    // $(function () {
-    //     $("#small".checked && "#green".checked).click(function () {
-    //         if ($("input[name=size]").is("#small") && ($("input[name=color").is("#green"))) {
-    //             $("#itemdv").show();
-    //         } else {
-    //             $("#itemdv").hide();
-    //         }
-    //     });
-    // });
-    
-    
-    // $(function () {
-    //     $("input[name=size]").click(function () {
-    //         if ($(this).is("#small")) {
-    //             $("#itemdv").show();
-    //         } else {
-    //             $("#itemdv").hide();
-    //         }
-    //     });
-    // });
 
-
-
-
-
-
-
-
-const sizeSelector = 'input:radio[name=size]';
-const colorSelector = 'input:radio[name=color]';
+const sizeSelector = 'input:radio[id=small]';
+const colorSelector = 'input:radio[id=green]';
 const cartSelector = 'button[name=cart]';
 
 $(function() {
@@ -323,6 +278,45 @@ function validityCheck() {
 }
 
 });
+
+
+
+
+
+
+const sizeSelector1 = 'input:radio[id=small]';
+const colorSelector1 = 'input:radio[id=chamomile]';
+const cartSelector1 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+
+
+const SMALL = 20;
+const CHAMOMILE = 0;
+const CARTBUTTON = 5;
+
+function validityCheck() {
+  let $size = $(`${sizeSelector1}`);
+  let $color = $(`${colorSelector1}`);
+  
+  let size_flag = $size.is(':checked');
+  let color_flag = $color.is(':checked');
+
+  $('#itemdv1B').toggle(size_flag && color_flag) && $('#itemdv2B').toggle(size_flag && color_flag) && $('#yourbutton').toggle(size_flag && color_flag);
+
+}
+
+});
+
+
+
+
+
 
 document.querySelector('#yourbutton').onclick = function(){
     document.querySelector('#itemscart').style.display = "none" 
