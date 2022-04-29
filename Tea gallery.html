@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON-data-driven image gallery</title>
+<style>
+	.imagebox {
+		float:left;
+		background-color: white;
+		padding: 9px;
+		margin: 12px;
+		width: 16.5%;
+		border-radius: 9px;
+	}
+
+	.bigbox {
+			width: 96.5%;
+	}	
+	
+	.imagebox img{
+			width: 100%;
+	}
+
+	#container {
+			width: 1200px;
+			border-radius: 12px;
+			background-color: #D7D7CB;
+			text-align: center;
+			margin:auto;
+	}
+</style>
+<script src="http://iyawebdev.com/jquery.js"></script>	
+	
+<script>
+
+
+
+var gallerytitle = "Behind the Scenes";
+	
+var imagedata = new Array;
+// Default array of JS data objects for image gallery
+
+/* note method 1 -- use push
+
+imagedata.push(			   
+		{ 
+		"url": "https://cdn.theatlantic.com/assets/media/img/mt/2018/11/shutterstock_552503470/lead_720_405.jpg?mod=1541605820",
+		"caption":"Smiling pug", 
+		"credit": "Photo by John Smith" 
+		}
+	);	
+
+
+*/	
+
+// method2 -- JSON format:
+imagedata = [
+			{ 
+				"url": "BTS4.png",
+			},
+			{ 
+				"url": "BTS5.png",
+			},
+			{ 
+				"url": "BTS1.png",
+			},
+			{ 
+				"url": "BTS2.png",
+			},
+			{ 
+				"url": "BTS3.png",
+			}]
+var loadgallery = function(){
+
+	$("#thumbs").html("");
+
+
+	$("#title").html(gallerytitle);
+
+	updateimage(imagedata[0].url, imagedata[0].caption, imagedata[0].credit);
+	
+
+	gallery = "";
+					   
+	for(i=0;i<imagedata.length;i++){
+		gallery += "<div class='imagebox'>"		
+		gallery += "<img src='" + imagedata[i].url + "' class='thumbimg' index='" + i + "'>";
+		gallery += "</div>";
+	}	
+
+	$("#thumbs").html(gallery);
+	
+	
+	$(".thumbimg").on("mouseover", function(){
+		i = $(this).attr("index");
+		updateimage(imagedata[i].url, imagedata[i].caption, imagedata[i].credit);
+	})
+
+}
+
+var loadjsonurl = function(){
+	
+	loadgallery();
+}
+
+
+var updateimage = function(src, caption, credit) {
+	$("#mainphoto").attr("src", src);
+	$("#caption").html(caption + "<br>" + "<em>" + credit + " </em>");
+}
+	
+$(document).ready(function(){
+
+	loadgallery();
+
+	$("#save").on("click", function(){
+		localStorage.setItem("gallerydata", JSON.stringify(imagedata));
+	})
+	$("#load").on("click", function(){
+		imagedata = JSON.parse(localStorage.getItem("gallerydata"));
+	})
+	$("#clear").on("click", function(){
+		imagedata = "";
+	})
+	$("#reload").on("click", function(){
+		loadgallery();
+	})
+	$("#dump").on("click", function(){
+		console.log(imagedata);
+	})
+})
+</script>
+</head>
+<body>
+<div id="container">	
+<h1 id="title" class="imagebox bigbox">Image gallery</h1>	
+
+<div id="thumbs">
+</div>
+<div id="topbox" class="imagebox bigbox">
+	<img src="" id="mainphoto">
+	<br>
+</div>	
+<br style="clear:both">
+<br style="clear:both">
+	<br style="clear:both">	
+</div>	
+</body>
+</html>
