@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
     <style>
         .outercontainer {
-            height: 1400px;
+            height: auto;
             background-color: #F3F1EB;
         }
 
@@ -38,10 +38,22 @@
             line-height: 30px;
         }
 
-        .outercontainer {
-            height: 1400px;
-            background-color: #F3F1EB;
+        .whitebox {
+            width: 80%;
+            height: auto;
+            margin: auto;
+            background-color: rgb(227, 227, 227);
+            text-align: center;
+            padding-top: 1em;
+            margin-bottom: 4em;
         }
+
+        .whitebox h1 {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
+            margin: 1em;
+        }
+
 
         #fieldimage {
             height: 350px;
@@ -52,6 +64,45 @@
             opacity: 0.9;
 
         }
+
+        .column {
+            float: left;
+            width: 20%;
+            padding: 10px 20px;
+            margin: 10px;
+            height: 100px;
+            box-sizing: border-box;
+            background-color: white;
+            text-align: left;
+
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .column:hover{
+            height: 330px;
+            transition: 1s;
+        }
+
+        .row {
+            margin-left: 100px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .column h2 {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .column p {
+            line-height: 20px;
+        }
+
 
         p {
             font-family: 'Josefin Sans', sans-serif;
@@ -73,7 +124,6 @@
     <div class="outercontainer">
 
         <div id="textbox2">
-
             <h1><strong>Help us to keep Folia brewing!</strong></h1>
 
             <h2>Where we are right now:</h2>
@@ -98,8 +148,41 @@
                 to the side to pay for business insurance and any other insurances we may need. This is crucial to our
                 company.</p>
 
+            <br><br><br>
+
         </div> <!-- offers textbox-->
 
+        <div class="whitebox">
+            <h1>Phase 1 and 2 and Beyond...</h1>
+            <div class="row">
+                <div class="column">
+                    <h2><strong>Logistics</strong></h2>
+                    <p>Funding, at our current stage, will help support buying products, hiring employees, and covering
+                        other capital expenses.</p>
+                </div>
+                <div class="column">
+                    <h2><strong>Manufacturing</strong></h2>
+                    <p>The first thing we intend to do with our capital is build out our sourcing and manufacturing
+                        process. Currently we are sourcing the tea wholesale then packaging each and every tea product
+                        by hand.</p>
+                </div>
+                <div class="column">
+                    <h2><strong>Administration</strong></h2>
+                    <p>We eventually want to offload the manufacturing process to focus more on the marketing and
+                        administrative aspects of the company. By outsourcing this work to 3rd parties we will be able
+                        to make more of our tea at a quicker rate than before.</p>
+                </div>
+                <div class="column">
+                    <h2><strong>Our Future</strong></h2>
+                    <p>In the future, it may be financially advantageous for us to purchase our own tea farm. Once we
+                        have the demand for our tea, we can streamline the growing and distribution process by keeping
+                        everything internal.</p>
+                </div>
+              </div>
+
+
+        </div>
+        <br>
     </div> <!-- Outercontainer -->
 
 </body>
@@ -109,7 +192,7 @@
 
         /* For tablets: */
         #textbox2 {
-            width:80%;
+            width: 80%;
         }
 
     }
@@ -118,7 +201,20 @@
 
         /* For mobile: */
         #textbox2 {
-            width:85%;
+            width: 85%;
+        }
+
+        .column {
+            width: 90%;
+        }
+
+        .row{
+            margin-left: 10px;
+        }
+
+        .column:hover{
+            height: 250px;
+            transition: 1s;
         }
     }
 </style>
