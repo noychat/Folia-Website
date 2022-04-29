@@ -75,8 +75,7 @@
 	/* border: 1px solid blue; */
 	position: relative;
 	margin: auto;
-	width: 80%;
-	height: 10%;
+	width: 10%;
 }
 
 .announcement {
@@ -126,8 +125,10 @@
 		left: 0;
 		right: 0;
 		text-align: center;
+		width: 30%;
 	}
 }
+
 
 @media only screen and (max-width: 800px) {
 	/* For mobile: */
@@ -142,6 +143,10 @@
 
 	#menu li a {
 		width: 76px;
+	}
+
+	#logobox {
+		width: 30%;
 	}
 
 }
