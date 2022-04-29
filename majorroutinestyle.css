@@ -183,3 +183,16 @@
   .cart-btn:hover {
     background-color: black;
   }
+
+  .cart-btn2 {
+  
+    background-color: RGB(94, 94, 76);
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+    width: 20px;
+    position: absolute;
+  }
