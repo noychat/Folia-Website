@@ -98,12 +98,12 @@
                  
                         <div class="choosesize">
                           <div>
-                          <input data-image="small" type="radio" id="small" name="size" value="20" id="item1" class="radios1" checked> 
+                          <input data-image="small" type="radio" id="small" name="size" value="20" class="radios1" checked> 
                             <label for="small"><span></span></label> 
                             <div class="label">8 oz</div>    
                           </div>
                           <div>
-                            <input data-image="big" type="radio" id="big" name="size" value="40" id="item2" class="radios1"> 
+                            <input data-image="big" type="radio" id="big" name="size" value="40" class="radios1"> 
                             <label for="big"><span></span></label>
                             <div class="label">16 oz</div>    
                           </div>
@@ -151,8 +151,11 @@
 </div><!--close CONTAINER-->
 
 <div id="shoppingcart">
-<div> <input type="text" name="amount" id="item" ></div>
+<div id="itemdv" style="display: none"> <input type="text" name="amount" id="item" ></div>
 </div>
+
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
@@ -165,7 +168,7 @@
      $('.active').removeClass('active');
      $('.columnleft img[data-image = ' + teatype + ']').addClass('active');
      $(this).addClass('active');
- });
+ }); 
 
  $('.choosesize input').on('click', function() {
      var teatype = $(this).attr('data-image');
@@ -176,17 +179,24 @@
  });
 
  
-if (".choosesize input".checked && ".choosetea input".checked){
+// if (".choosesize.radios1 input" && ".choosetea input"){
  
-     var teatype = $(this).attr('data-image1');
+//      var teatype = $(".choosetea").attr('data-image1');
 
-     $('.active').removeClass('active');
-     $('.columnleft img[data-image1 = ' + teatype + ']').addClass('active');
-     $(this).addClass('active');
- };
+//      $('.active').removeClass('active');
+//      $('.columnleft img[data-image1 = ' + teatype + ']').addClass('active');
+//      $(this).addClass('active');
+//  };
 
 
 
+// $('.item1').on('click', function() {
+//      var teatype = $(this).attr('data-image1');
+
+//      $('.active').removeClass('active');
+//      $('.columnleft img[data-image1 = ' + teatype + ']').addClass('active');
+//      $(this).addClass('active');
+//  });
 
 
 //local storage color
@@ -230,7 +240,37 @@ $('.radios1').change(function(e){
 
 //add to cart
 
-});
+    });
+
+
+    $(function () {
+        $("#small".checked && "#green".checked).click(function () {
+            if ($("input[name=size]").is("#small") && ($("input[name=color").is("#green"))) {
+                $("#itemdv").show();
+            } else {
+                $("#itemdv").hide();
+            }
+        });
+    });
+    
+    
+    // $(function () {
+    //     $("input[name=size]").click(function () {
+    //         if ($(this).is("#small")) {
+    //             $("#itemdv").show();
+    //         } else {
+    //             $("#itemdv").hide();
+    //         }
+    //     });
+    // });
+
+//     function response(){
+//   if(document.getElementById("#small").checked && document.getElementById("#green").checked){
+//       document.getElementById("#itemdiv").style.display="visible";
+//   }else{
+// }
+//     }
+
 </script>
 
 
