@@ -172,7 +172,10 @@
 <div id="itemdv2A" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
 
 <div id="itemdv1B" style="display: none" > <input type="text" name="amount" class="item" value="8oz Chamomile Tea"></div>
-<div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$21"></div>
+<div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
+
+<div id="itemdv1C" style="display: none" > <input type="text" name="amount" class="item" value="8oz Oolong Tea"></div>
+<div id="itemdv2C" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
 
 <button style="display: none" type="button" class="cart-btn2" id="yourbutton" name="remove" value="10">x</button>
 </div>
@@ -296,18 +299,48 @@ $(function() {
 
 
 
-const SMALL = 20;
-const CHAMOMILE = 0;
-const CARTBUTTON = 5;
+
+const CHAMOMILE = 1;
+
 
 function validityCheck() {
-  let $size = $(`${sizeSelector1}`);
-  let $color = $(`${colorSelector1}`);
+  let $size1 = $(`${sizeSelector1}`);
+  let $color1 = $(`${colorSelector1}`);
   
-  let size_flag = $size.is(':checked');
-  let color_flag = $color.is(':checked');
+  let size_flag1 = $size1.is(':checked');
+  let color_flag1 = $color1.is(':checked');
 
-  $('#itemdv1B').toggle(size_flag && color_flag) && $('#itemdv2B').toggle(size_flag && color_flag) && $('#yourbutton').toggle(size_flag && color_flag);
+  $('#itemdv1B').toggle(size_flag1 && color_flag1) && $('#itemdv2B').toggle(size_flag1 && color_flag1) && $('#yourbutton').toggle(size_flag1 && color_flag1);
+
+}
+
+});
+
+
+const sizeSelector2 = 'input:radio[id=small]';
+const colorSelector2 = 'input:radio[id=oolong]';
+const cartSelector2 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+
+
+
+const OOLONG = 2;
+
+
+function validityCheck() {
+  let $size2 = $(`${sizeSelector2}`);
+  let $color2 = $(`${colorSelector2}`);
+  
+  let size_flag2 = $size2.is(':checked');
+  let color_flag2 = $color2.is(':checked');
+
+  $('#itemdv1C').toggle(size_flag2 && color_flag2) && $('#itemdv2C').toggle(size_flag2 && color_flag2) && $('#yourbutton').toggle(size_flag2 && color_flag2);
 
 }
 
