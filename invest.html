@@ -70,7 +70,7 @@
             width: 20%;
             padding: 10px 20px;
             margin: 10px;
-            height: 100px;
+            height: auto;
             box-sizing: border-box;
             background-color: white;
             text-align: left;
@@ -79,13 +79,10 @@
             overflow: hidden;
         }
 
-        .column:hover{
-            height: 330px;
-            transition: 1s;
-        }
-
         .row {
             margin-left: 100px;
+            height: auto;
+            padding-bottom: 4em;
         }
 
         .row:after {
@@ -126,6 +123,15 @@
         <div id="textbox2">
             <h1><strong>Help us to keep Folia brewing!</strong></h1>
 
+            <h2>Our ask:</h2>
+            <p>We seek $20,000 in funding from a VC investor to cover multiple sectors of our company such as labor costs, warehousing, product development, and marketing costs. </p>
+            <br>
+
+            <h2>Where are the funds going into?</h2>
+            <p>In the beginning stages of building our company, our labor cost will be somewhat low because founders will not be taking pay. Since the founders will not be taking on a salary initially all labor costs would go to the tea manufacturers for the workers who make our tea cans. </p>
+            <p>Other places where a large source of our funding would go towards is product development. We will need to understand what type of packaging keeps the tea the freshest, while also being able to hold the extra tea tools such as strainers. The final area we will be putting more effort into is our marketing strategy. We want to build a network of restaurants that will recommend us to others and stay faithful to our brand.</p>
+            <br>
+
             <h2>Where we are right now:</h2>
             <p>Referencing the P/L ratio, total revenue, and income statements of our competitors (Art of Tea, Tazo), we
                 have currently valued Folia at 150K. We seek 20K. In 5 years, we project our growth to value Folia at
@@ -148,31 +154,31 @@
                 to the side to pay for business insurance and any other insurances we may need. This is crucial to our
                 company.</p>
 
-            <br><br><br>
+            <br><br>
 
         </div> <!-- offers textbox-->
 
         <div class="whitebox">
             <h1>Phase 1 and 2 and Beyond...</h1>
             <div class="row">
-                <div class="column">
+                <div class="column one">
                     <h2><strong>Logistics</strong></h2>
                     <p>Funding, at our current stage, will help support buying products, hiring employees, and covering
                         other capital expenses.</p>
                 </div>
-                <div class="column">
+                <div class="column two">
                     <h2><strong>Manufacturing</strong></h2>
                     <p>The first thing we intend to do with our capital is build out our sourcing and manufacturing
                         process. Currently we are sourcing the tea wholesale then packaging each and every tea product
                         by hand.</p>
                 </div>
-                <div class="column">
+                <div class="column three">
                     <h2><strong>Administration</strong></h2>
                     <p>We eventually want to offload the manufacturing process to focus more on the marketing and
                         administrative aspects of the company. By outsourcing this work to 3rd parties we will be able
                         to make more of our tea at a quicker rate than before.</p>
                 </div>
-                <div class="column">
+                <div class="column four">
                     <h2><strong>Our Future</strong></h2>
                     <p>In the future, it may be financially advantageous for us to purchase our own tea farm. Once we
                         have the demand for our tea, we can streamline the growing and distribution process by keeping
@@ -212,9 +218,20 @@
             margin-left: 10px;
         }
 
-        .column:hover{
-            height: 250px;
-            transition: 1s;
+        .one:hover{
+            height: 160px;
+        }
+
+        .two:hover{
+            height: 200px;
+        }
+
+        .three:hover{
+            height: 230px;
+        }
+
+        .four:hover{
+            height: 220px;
         }
     }
 </style>
