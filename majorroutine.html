@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet"> 
     <link href="https://noychat.github.io/Folia-Website/majorroutinestyle.css" rel="stylesheet"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
   
 
@@ -41,7 +40,7 @@
     border-radius: 6px;
     font-size: 20px;
     color: RGB(94, 94, 76);
-    width: 200px;
+    width: 220px;
     height: 30px;
     padding-left: 10px;
     transition: all .5s;
@@ -90,7 +89,7 @@
                 </div>
                
                
-                <!-- Right Column -->
+                <!-- Right Column with Product Desc, Radio, Size, type, price, add to cart -->
                 <div class="columnright">
                
                   <!-- Product Description -->
@@ -100,10 +99,8 @@
                     <p>We source our tea leaves from around the world. Try our many selections of teas and you will taste the difference.</p>
                   </div>
                
-                  <!-- Product Configuration -->
+    
                   <div class="product-configuration">
-
-
 
                      <!-- Tea Size -->
                      <div class="tea-type">
@@ -177,7 +174,25 @@
 <div id="itemdv1C" style="display: none" > <input type="text" name="amount" class="item" value="8oz Oolong Tea"></div>
 <div id="itemdv2C" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
 
+
+<div id="itemdv1D" style="display: none" > <input type="text" name="amount" class="item" value="16oz Green Tea"></div>
+<div id="itemdv2D" style="display: none"> <input type="text" name="amount" class="item1" value="$40"></div>
+
+<div id="itemdv1E" style="display: none" > <input type="text" name="amount" class="item" value="16oz Chamomile Tea"></div>
+<div id="itemdv2E" style="display: none"> <input type="text" name="amount" class="item1" value="$40"></div>
+
+<div id="itemdv1F" style="display: none" > <input type="text" name="amount" class="item" value="16oz Oolong Tea"></div>
+<div id="itemdv2F" style="display: none"> <input type="text" name="amount" class="item1" value="$40"></div>
+
+
 <button style="display: none" type="button" class="cart-btn2" id="yourbutton" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton1" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton2" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton3" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton4" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton5" name="remove" value="10">x</button>
+
+
 </div>
 </div>
 
@@ -188,7 +203,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
 <script>
     $(document).ready(function() {
- 
+ //click on radio buttons ---> image changes
  $('.choosetea input').on('click', function() {
      var teatype = $(this).attr('data-image');
 
@@ -263,8 +278,6 @@ $(function() {
     validityCheck();
   });
 
-
-
 const SMALL = 20;
 const GREEN = 0;
 const CARTBUTTON = 5;
@@ -297,11 +310,7 @@ $(function() {
     validityCheck();
   });
 
-
-
-
 const CHAMOMILE = 1;
-
 
 function validityCheck() {
   let $size1 = $(`${sizeSelector1}`);
@@ -310,7 +319,7 @@ function validityCheck() {
   let size_flag1 = $size1.is(':checked');
   let color_flag1 = $color1.is(':checked');
 
-  $('#itemdv1B').toggle(size_flag1 && color_flag1) && $('#itemdv2B').toggle(size_flag1 && color_flag1) && $('#yourbutton').toggle(size_flag1 && color_flag1);
+  $('#itemdv1B').toggle(size_flag1 && color_flag1) && $('#itemdv2B').toggle(size_flag1 && color_flag1) && $('#yourbutton1').toggle(size_flag1 && color_flag1);
 
 }
 
@@ -327,11 +336,7 @@ $(function() {
     validityCheck();
   });
 
-
-
-
 const OOLONG = 2;
-
 
 function validityCheck() {
   let $size2 = $(`${sizeSelector2}`);
@@ -340,7 +345,7 @@ function validityCheck() {
   let size_flag2 = $size2.is(':checked');
   let color_flag2 = $color2.is(':checked');
 
-  $('#itemdv1C').toggle(size_flag2 && color_flag2) && $('#itemdv2C').toggle(size_flag2 && color_flag2) && $('#yourbutton').toggle(size_flag2 && color_flag2);
+  $('#itemdv1C').toggle(size_flag2 && color_flag2) && $('#itemdv2C').toggle(size_flag2 && color_flag2) && $('#yourbutton2').toggle(size_flag2 && color_flag2);
 
 }
 
@@ -351,9 +356,118 @@ function validityCheck() {
 
 
 
+
+
+
+
+
+
+
+
+
+const sizeSelector3 = 'input:radio[id=big]';
+const colorSelector3 = 'input:radio[id=green]';
+const cartSelector3 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+const BIG = 40;
+const GREEN = 0;
+
+function validityCheck() {
+  let $size3 = $(`${sizeSelector3}`);
+  let $color3 = $(`${colorSelector3}`);
+  
+  let size_flag3 = $size3.is(':checked');
+  let color_flag3 = $color3.is(':checked');
+
+  $('#itemdv1D').toggle(size_flag3 && color_flag3) && $('#itemdv2D').toggle(size_flag3 && color_flag3) && $('#yourbutton3').toggle(size_flag3 && color_flag3);
+
+}
+
+});
+
+
+const sizeSelector4 = 'input:radio[id=big]';
+const colorSelector4 = 'input:radio[id=chamomile]';
+const cartSelector4 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+const CHAMOMILE = 1;
+
+function validityCheck() {
+  let $size4 = $(`${sizeSelector4}`);
+  let $color4 = $(`${colorSelector4}`);
+  
+  let size_flag4 = $size4.is(':checked');
+  let color_flag4 = $color4.is(':checked');
+
+  $('#itemdv1E').toggle(size_flag4 && color_flag4) && $('#itemdv2E').toggle(size_flag4 && color_flag4) && $('#yourbutton4').toggle(size_flag4 && color_flag4);
+
+}
+
+});
+
+const sizeSelector5 = 'input:radio[id=big]';
+const colorSelector5 = 'input:radio[id=oolong]';
+const cartSelector5 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+const OOLONG = 2;
+
+function validityCheck() {
+  let $size5 = $(`${sizeSelector5}`);
+  let $color5 = $(`${colorSelector5}`);
+  
+  let size_flag5 = $size5.is(':checked');
+  let color_flag5 = $color5.is(':checked');
+
+  $('#itemdv1F').toggle(size_flag5 && color_flag5) && $('#itemdv2F').toggle(size_flag5 && color_flag5) && $('#yourbutton5').toggle(size_flag5 && color_flag5);
+
+}
+
+});
+
+
+
 document.querySelector('#yourbutton').onclick = function(){
     document.querySelector('#itemscart').style.display = "none" 
 };
+
+document.querySelector('#yourbutton1').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton2').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton3').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton4').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton5').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
 
 </script>
 
