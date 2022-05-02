@@ -281,7 +281,7 @@ var play = function() {
         animate({"top":"1210px", "left":"850px"}, 2000,  "linear", function(){
 			$("#startsound").trigger("pause");
     
-		})//function close, animate close
+		})
 		
     
     $("#descpbox2").delay(13000).fadeIn(2000);
@@ -295,9 +295,9 @@ var play = function() {
         delay(10000).
         animate({"top":"1380px", "left":"720px"}, 2000, "linear", function(){
 			$("#startsound").trigger("pause");
-		})//function close, animate close
+		})
     $("#descpbox2").delay(11000).fadeOut(500);
-	//animate({map}, length, easing, callback)
+	
     $("#descpbox3").delay(26000).fadeIn(2000);
     
     $("#delivery").
@@ -311,7 +311,7 @@ var play = function() {
 			$("#startsound").trigger("pause");
     $("#descpbox3").delay(10000).fadeOut(500);
     $("#outerdescpbox").slideUp(2000);
-		})//function close, animate close
+		})
 		
     
 }
@@ -332,12 +332,12 @@ var reset = function(){
 
 $(document).ready(function(){
 
-	$("#playbutton").on("click", function(){ // user clicks on start pistol graphic
-	    play();						// race() function runs
+	$("#playbutton").on("click", function(){ 
+	    play();						
 	});
 
-    $("#resetbutton").on("click", function(){ // user clicks on start pistol graphic
-	    reset();						// race() function runs
+    $("#resetbutton").on("click", function(){ 
+	    reset();					
 	});
 
 });
