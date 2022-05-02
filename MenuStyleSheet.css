@@ -11,6 +11,7 @@
 	position: relative;
 	float: left;
 	list-style: none;
+	visibility: hidden;
 }
 
 #menu li a {
@@ -23,6 +24,7 @@
 	/* background-color: rgb(226, 112, 58); */
 	color: black;
 	margin-right: 5px;
+	visibility: hidden;
 }
 
 #menu li a:hover {
