@@ -259,7 +259,7 @@ $(document).ready(function(){
 });
 
 var play = function() {
-    $("#startsound").start().trigger("play");
+    $("#startsound").trigger("play");
     $("#spotlightbox").hide();
         $("#teasource").hide();
         $("#packaging").hide();
@@ -317,7 +317,7 @@ var play = function() {
 }
 
 var reset = function(){
-    $("#startsound").stop().end().trigger("pause");
+    $("#startsound").trigger("pause");
     $("#spotlightbox").hide();
     $("#timer").stop().css('width', '1.5%');
     $("#teasource").stop().hide().position({"top":"220px", "left":"860"});
