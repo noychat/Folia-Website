@@ -177,7 +177,7 @@
 	/*border: solid 1px black;*/
 	width:350px;
 	border-radius: 10px;
-	justify-content: flex-end;
+	justify-content: flex-start;
 }
 #searchresult{
 	text-align: left;
