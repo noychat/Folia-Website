@@ -158,7 +158,7 @@
 /*css for searchbar*/
 
 #outercontainer{
-	width:350px;
+	width:350px!;
 	display: flex;
 	flex-direction: row;
 	z-index:3; 
@@ -177,7 +177,7 @@
 	/*border: solid 1px black;*/
 	width:350px;
 	border-radius: 10px;
-	justify-content: center;
+	justify-content: flex-end;
 }
 #searchresult{
 	text-align: left;
