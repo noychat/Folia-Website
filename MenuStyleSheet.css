@@ -1,59 +1,64 @@
-#menu * {
+#menu *{
 	margin: 0;
-	padding: 0;
-	font-family: "Avenir";
-	font-weight: normal;
-	font-style: normal;
-	font-size: 10pt;
+	padding:0;
+        font-family: 'NowRegular';
+        font-weight: normal;
+        font-style: normal;
 }
 
-#menu li {
+#menu li{
 	position: relative;
 	float: left;
 	list-style: none;
-	visibility: hidden;
 }
 
-#menu li a {
-	width: 90px;
+
+#menu li a{
+	width:100px;
 	height: 30px;
 	display: block;
-	text-decoration: none;
-	text-align: left;
+	text-decoration:none;
+	text-align: center;
 	line-height: 30px;
-	/* background-color: rgb(226, 112, 58); */
-	color: black;
-	margin-right: 5px;
+	background-color: rgb(226, 112, 58);
+	color: rgb(255, 255, 255);
+    margin-right: 50px;
+}
+
+#menu li a:hover{
+	background-color: rgb(255, 187, 0);
+}
+
+
+
+#menu ul ul{
+	position: absolute;
+	top: 30px;
 	visibility: hidden;
 }
 
-#menu li a:hover {
-	color: rgb(94, 94, 76);
-}
-
-#menu ul ul {
-	text-decoration: none;
-	text-align: left;
-}
-
-#menu ul ul ul {
-	display: block;
-	text-decoration: none;
-	text-align: left;
-	left: 30px;
-}
-
-#menu ul li:hover ul {
-	visibility: visible;
-}
-
-#menu ul li:hover ul ul {
+#menu ul ul ul{
+	position: absolute;
+	top: 0px; left:100px;
 	visibility: hidden;
 }
 
-#menu ul ul li:hover ul {
-	visibility: visible;
+
+
+#menu ul li:hover ul{
+	visibility:visible;
 }
+
+#menu ul li:hover ul ul{
+	visibility:hidden;
+}
+
+#menu ul ul li:hover ul{
+	visibility:visible;
+}
+
+
+
 
 #navbar {
 	/* border: 1px solid red; */
