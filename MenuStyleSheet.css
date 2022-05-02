@@ -12,6 +12,7 @@
 	float: left;
 	list-style: none;
 	color: black;
+	visibility:visible;
 }
 
 
@@ -24,6 +25,7 @@
 	line-height: 30px;
     margin-right: 50px;
 	color: black;
+	visibility:visible;
 }
 
 #menu li a:hover{
