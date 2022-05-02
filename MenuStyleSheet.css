@@ -1,7 +1,7 @@
 #menu *{
 	margin: 0;
 	padding:0;
-        font-family: 'NowRegular';
+
         font-weight: normal;
         font-style: normal;
 }
@@ -20,13 +20,12 @@
 	text-decoration:none;
 	text-align: center;
 	line-height: 30px;
-	background-color: rgb(226, 112, 58);
-	color: rgb(255, 255, 255);
+	color: RGB(94, 94, 76);
     margin-right: 50px;
 }
 
 #menu li a:hover{
-	background-color: rgb(255, 187, 0);
+	background-color: black;
 }
 
 
