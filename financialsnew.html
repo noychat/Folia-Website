@@ -116,6 +116,89 @@
         p {
             font-family: 'Josefin Sans', sans-serif;
         }
+
+
+
+
+
+
+
+        img {
+            width: 60%;
+            margin-left:300px;
+            position: absolute;
+            float: left;
+        }
+
+        #financeimage2 {
+            display: none;
+        }
+
+        #financeimage3 {
+            display: none;
+
+        }
+
+        #financeimage4 {
+            display: none;
+
+        }
+
+        #financeimage5 {
+            display: none;
+
+        }
+
+        #introtext {
+            color: black;
+            font-size: 20pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+        }
+
+        #text2 {
+            color: black;
+            font-size: 15pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        #button1 {
+            margin-left: 280px;
+            float: left;
+        }
+
+        #button2 {
+            margin-left: 10px;
+            float: left;
+        }
+
+        #button3 {
+            margin-left: 10px;
+            float: left;
+        }
+
+        #button4 {
+            margin-left: 10px;
+            float: left;
+        }
+
+        #button5 {
+            margin-left: 10px;
+            float: left;
+        }
+
+        .cont{
+            width:100%;
+            height: 700px;
+        }
+
+        .cont h2{
+            text-align: center;
+            font-size: 19pt;
+        }
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -131,38 +214,94 @@
     <div id="header"></div>
     <!--close all header portion-->
     <div class="outercontainer">
-
         <div id="textbox2">
             <h1 style="text-align: center;">Financial Projections</h1>
             <div class="block"></div>
-            <p style="text-align: center;">We have developed our 5-year Pro-forma financial projections below. Through our analysis, we have created multiple scenarios and contingency plans to mitigate risk. We also will implement standard accounting practices such as a balance sheet, income statement, and cash flow to track our growth (see Appendix F to I).</p>
+            <p style="text-align: center;">We have developed our 5-year Pro-forma financial projections below. Through
+                our analysis, we have created multiple scenarios and contingency plans to mitigate risk. We also will
+                implement standard accounting practices such as a balance sheet, income statement, and cash flow to
+                track our growth (see Appendix F to I).</p>
             <br>
+        </div>
+        
+        <div class="cont">
+
+            <h2> Click the buttons bellow to see folia's projected revenue for year's 1-5:</h2>
+    
+            <br>
+    
+    
+            <div id="button1">
+                <input id="button1" type="radio" name="year" value="year1" checked> Year 1
+            </div>
+    
+            <div id="button2">
+                <input id="button2" type="radio" name="year" value="year2"> Year 2
+            </div>
+    
+            <div id="button3">
+                <input id="button3" type="radio" name="year" value="year3"> Year 3
+            </div>
+    
+            <div id="button4">
+                <input id="button4" type="radio" name="year" value="year4"> Year 4
+            </div>
+    
+            <div id="button5">
+                <input id="button5" type="radio" name="year" value="year5"> Year 5
+            </div>
+    
+    
+            <br><br><br>
+    
+            <img id="financeimage1" src="year1.png" alt="year 1 projected revenue">
+            <img id="financeimage2" src="year2.png" alt="year 2 projected revenue">
+            <img id="financeimage3" src="year3.png" alt="year 3 projected revenue">
+            <img id="financeimage4" src="year4.png" alt="year 4 projected revenue">
+            <img id="financeimage5" src="year5.png" alt="year 5 projected revenue">
+    
+        </div>
+
+        
+        <div id="textbox2">
 
             <h2>Contingency Plan:</h2>
-            <p>In the Maximum Likelihood growth scenario, we would get a couple of loyal, primary clients. These would be high-end restaurants in Los Angeles. We would continue to supply to them and have a stable cash flow.</p>
-            <p>In a scenario where things got significantly better, we would see high growth. In this scenario, we would get a large client like LA Phil. This would lead us to other connections like other high-end music venues or other Phil’s in other states. We would see a high increase in our cash flow and increased brand awareness with our target consumer base.</p>
-            <p>In a scenario where things got worse, we would see a marked stagnancy in our growth. In this scenario, we would have minimal trials with clients, and they would dislike our product, failing to understand the difference between our product and other teas like Lipton or Teavana. In an even worse scenario, we would have trouble acquiring customers and communicating the value of our product.</p>
+            <p>In the Maximum Likelihood growth scenario, we would get a couple of loyal, primary clients. These would
+                be high-end restaurants in Los Angeles. We would continue to supply to them and have a stable cash flow.
+            </p>
+            <p>In a scenario where things got significantly better, we would see high growth. In this scenario, we would
+                get a large client like LA Phil. This would lead us to other connections like other high-end music
+                venues or other Phil’s in other states. We would see a high increase in our cash flow and increased
+                brand awareness with our target consumer base.</p>
+            <p>In a scenario where things got worse, we would see a marked stagnancy in our growth. In this scenario, we
+                would have minimal trials with clients, and they would dislike our product, failing to understand the
+                difference between our product and other teas like Lipton or Teavana. In an even worse scenario, we
+                would have trouble acquiring customers and communicating the value of our product.</p>
             <br>
         </div> <!-- offers textbox-->
 
         <div class="row">
             <div class="column one">
-                <h2><strong><a href="Folia Financials - Balance Sheet.pdf" target=blank>Projected balance sheet</a></strong></h2>
+                <h2><strong><a href="Folia Financials - Balance Sheet.pdf" target=blank>Projected balance
+                            sheet</a></strong></h2>
                 <iframe src="Folia Financials - Balance Sheet.pdf" width="100%" height="200px"></iframe>
             </div>
             <div class="column two">
-                <h2><strong><a href="Folia Financials - Cash Flow.pdf" target=blank>Cash flow projections</a></strong></h2>
+                <h2><strong><a href="Folia Financials - Cash Flow.pdf" target=blank>Cash flow projections</a></strong>
+                </h2>
                 <iframe src="Folia Financials - Cash Flow.pdf" width="100%" height="200px"></iframe>
             </div>
             <div class="column three">
-                <h2><strong><a href="Folia Financials - Income Statement.pdf" target=blank>Income Statement</a></strong></h2>
+                <h2><strong><a href="Folia Financials - Income Statement.pdf" target=blank>Income Statement</a></strong>
+                </h2>
                 <iframe src="Folia Financials - Income Statement.pdf" width="100%" height="200px"></iframe>
             </div>
             <div class="column four">
-                <h2><strong><a href="Folia Financials - Contingency Plan.pdf" target=blank>Projections of profit and loss</a></strong></h2>
+                <h2><strong><a href="Folia Financials - Contingency Plan.pdf" target=blank>Projections of profit and
+                            loss</a></strong></h2>
                 <iframe src="Folia Financials - Contingency Plan.pdf" width="100%" height="200px"></iframe>
             </div>
-          </div>
+        </div>
 
         <br>
 
@@ -172,21 +311,25 @@
             <br>
 
             <p><strong>1. Minimum amount of cash needed to cover your costs:</strong></p>
-            <p style="margin-left:50px">In order for Folia tea to cover our costs of operation (BEQ), we need at least <span style="color:rgb(234, 30, 30);"><strong>$2970.75</strong></span> in cash in the bank. </p>
-            
-            <p><strong>2. The quantity of products you will have to sell per month to cover your costs (BEQ) including both fixed and variable costs:</strong></p>
+            <p style="margin-left:50px">In order for Folia tea to cover our costs of operation (BEQ), we need at least
+                <span style="color:rgb(234, 30, 30);"><strong>$2970.75</strong></span> in cash in the bank. </p>
+
+            <p><strong>2. The quantity of products you will have to sell per month to cover your costs (BEQ) including
+                    both fixed and variable costs:</strong></p>
             <p style="margin-left:50px">100 units; per quarter total cost: ~ $2970.75</p>
 
             <p><strong>3. Variable costs:</strong></p>
             <p style="margin-left:50px">Tea leaves - median value of tea 100g/3.5oz (~$25) x ~100 units = $2500</p>
-            <p style="margin-left:50px">Delivery - $6.50/gallon x 20 gallons (1 gallon = ~20 miles) =  $78</p>
+            <p style="margin-left:50px">Delivery - $6.50/gallon x 20 gallons (1 gallon = ~20 miles) = $78</p>
             <p style="margin-left:50px">Packaging - $.98 (2 aluminum can) x 50 (~100 units) = $49</p>
-            <p style="margin-left:50px">Teaware - $50 (per high-quality tea pot + spoon) x 5 (for each new customer) = $250</p>
+            <p style="margin-left:50px">Teaware - $50 (per high-quality tea pot + spoon) x 5 (for each new customer) =
+                $250</p>
 
             <p><strong>4. Fixed costs:</strong></p>
-            <p style="margin-left:50px">Vendor Liability Insurance - $31.25/month (average liability insurance) x 3 (months in a quarter) = $93.75</p>
+            <p style="margin-left:50px">Vendor Liability Insurance - $31.25/month (average liability insurance) x 3
+                (months in a quarter) = $93.75</p>
             <br>
-            
+
 
             <br>
         </div> <!-- offers textbox-->
@@ -215,12 +358,54 @@
             width: 90%;
         }
 
-        .row{
+        .row {
             width: 95%;
             margin-left: 25px;
         }
 
     }
 </style>
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<script>
+    jQuery(document).ready(function () {
+
+        $("#button2").on("click", function () {
+            $("#financeimage2").fadeIn(2000);
+            $("#financeimage5").hide();
+            $("#financeimage4").hide();
+            $("#financeimage3").hide();
+
+        })
+
+        $("#button3").on("click", function () {
+            $("#financeimage3").fadeIn(2000);
+            $("#financeimage5").hide();
+            $("#financeimage4").hide();
+        })
+
+        $("#button4").on("click", function () {
+            $("#financeimage4").fadeIn(2000);
+            $("#financeimage5").hide();
+
+        })
+
+        $("#button5").on("click", function () {
+            $("#financeimage5").fadeIn(2000);
+        })
+
+        $("#button1").on("click", function () {
+            $("#financeimage5").hide();
+            $("#financeimage4").hide();
+            $("#financeimage3").hide();
+            $("#financeimage2").hide();
+        })
+
+
+    })
+
+</script>
 
 </html>
