@@ -201,7 +201,7 @@ body {
 	}
 
 	#navbar {
-		height: 200px;
+		height: 230px;
 	}
 
 	#logobox {
@@ -227,7 +227,7 @@ body {
 	}
 
 	.menu {
-		margin-top: 10px;
+		margin-top: 40px;
 		margin-left: 0px;
 		/*border: solid green 2px;*/
 	}
@@ -239,13 +239,14 @@ body {
 
 	#logobox {
 		width: 30%;
-		margin-top: 10px;
+		margin-top: 20px;
 		padding-top: 0;
 		/*border: solid pink 2px;*/
 	}
 
 	#outercontainer1 {
 		margin: auto;
+		margin-top: 80px;
 		display: flex;
 		align-items: center;
 		/*border: solid yellow 2px;*/
