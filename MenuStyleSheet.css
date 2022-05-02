@@ -85,14 +85,26 @@
 }
 
 #logobox {
-	/*border: 1px solid blue;*/
+	border: 1px solid blue;
 	position: relative;
 	margin-top: 1em;
-	margin-left: 43em;
+	margin-left: 0em;
 	margin-right: 17em;
 	width: 10%;
 }
 
+.announcement {
+	display: inline-block;
+	height: 30px;
+	text-align: center;
+	width: 100%;
+	background-color: rgb(94, 94, 76);
+	color: white;
+	padding-bottom: 6px;
+	vertical-align: center;
+	font-size: 0.8em;
+	font-family: "Avenir";
+}
 
 .footer {
 	display: inline-block;
@@ -111,19 +123,17 @@
 
 @media only screen and (max-width: 1400px) {
 	/* For tablets: */
-
 	.menu {
-		width:100%;
 		padding-top: 80px;
 		margin-left: 90px;
 	}
 
 	#navbar {
-		height: 380px;
+		height: 180px;
 	}
 
 	#logobox {
-		padding-top: 15px;
+		padding-top: 30px;
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -146,26 +156,18 @@
 	}
 
 	.menu {
-		padding-top: 100px;
-		margin-left: 10px;
+		padding-top: 80px;
+		margin-left: 0px;
 	}
 
 	#menu li a {
-		width: 50px;
+		width: 76px;
 	}
 
 	#logobox {
 		width: 30%;
 	}
 
-	#outercontainer1{
-		margin-top: 10em;
-		margin-left: 90px;
-	}
-	
-	.topphoto{
-		width:100%;
-	}
 }
 
 /*css for searchbar*/
@@ -175,7 +177,10 @@
 	display: flex;
 	flex-direction: row;
 	z-index:3;
+	margin-left: 1100px;
+
 	/*border: solid red 2px;*/
+	
 }
  #searchform {
 	text-align: center;
