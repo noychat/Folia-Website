@@ -1,0 +1,201 @@
+<html>
+
+<head> 
+    <title> Financial Projections </title>
+    
+</head>
+
+    <style>
+        #outercontainer {
+            wwidth: 1550px;
+            height: 1000px;
+            background-color: #fafafa;
+        }
+
+        #financeimage1 {
+            width: 1500;
+            height: 850;
+            margin-left: 130px;
+            position: absolute;
+            float: left;
+
+        }
+
+        #financeimage2 {
+            width: 1500;
+            height: 850;
+            margin-left: 130px;
+            position: absolute;
+            float: left;
+            display: none;
+
+        }
+
+        #financeimage3 {
+            width: 1500;
+            height: 850;
+            margin-left: 130px;
+            position: absolute;
+            float: left;
+            display: none;
+
+        }
+
+        #financeimage4 {
+            width: 1500;
+            height: 850;
+            margin-left: 130px;
+            position: absolute;
+            float: left;
+            display: none;
+
+        }
+
+        
+        #financeimage5 {
+            width: 1500;
+            height: 850;
+            margin-left: 130px;
+            position: absolute;
+            float: left;
+            display: none;
+
+        }
+
+        #introtext {
+            color: black;
+            font-size: 20pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+        }
+
+        #text2 {
+            color: black;
+            font-size: 15pt;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        #button1 {
+            margin-left: 350px;  
+            float: left;
+        }
+
+        #button2 {
+            margin-left: 10px;
+            float: left;       
+        }
+
+        #button3 {
+            margin-left: 10px;
+            float: left;
+        }
+
+        #button4 {
+            margin-left: 10px;  
+            float: left; 
+        }
+
+        #button5 {
+            margin-left: 10px;  
+            float: left;
+        }
+
+
+    </style>
+    <body>
+
+
+        <div id="outercontainer">
+
+            <div id="introtext"> <h1>Folia's Projected Revenue for the First 5 Years:</h1> </div>
+
+            <p id="text2"> Click the buttons bellow to see folia's projected revenue for year's 1-5:</p> 
+
+            <br>
+
+
+            <div id="button1"> 
+            <input id="button1"  type="radio" name="year" value="year1" >    Year 1 
+            </div>
+
+            <div id="button2"> 
+            <input id="button2"  type="radio" name="year" value="year2" >    Year 2 
+            </div>
+
+            <div id="button3"> 
+            <input id="button3"  type="radio" name="year" value="year3" >    Year 3 
+            </div>
+
+            <div id="button4"> 
+            <input id="button4"  type="radio" name="year" value="year4" >    Year 4 
+            </div>
+
+            <div id="button5"> 
+            <input id="button5"  type="radio" name="year" value="year5" >    Year 5 
+            </div>
+
+
+            <br><br><br>
+           
+            <img id="financeimage1" src="year1.png" alt="year 1 projected revenue">
+            <img id="financeimage2" src="year2.png" alt="year 2 projected revenue">
+            <img id="financeimage3" src="year3.png" alt="year 3 projected revenue">
+            <img id="financeimage4" src="year4.png" alt="year 4 projected revenue">
+            <img id="financeimage5" src="year5.png" alt="year 5 projected revenue">
+
+        
+           
+
+            
+           
+        </div> <!-- Outercontainer -->
+
+        <script src="http://code.jquery.com/jquery.js"></script>
+
+       <script>
+           jQuery(document).ready(function(){
+
+           $("#button2").on("click", function(){
+		$("#financeimage2").fadeIn(2000);
+        $("#financeimage5").hide();
+        $("#financeimage4").hide();
+        $("#financeimage3").hide();
+        
+	})
+
+    $("#button3").on("click", function(){
+		$("#financeimage3").fadeIn(2000);
+        $("#financeimage5").hide();
+        $("#financeimage4").hide();
+	})
+
+    $("#button4").on("click", function(){
+		$("#financeimage4").fadeIn(2000);
+        $("#financeimage5").hide();
+
+	})
+
+    $("#button5").on("click", function(){
+		$("#financeimage5").fadeIn(2000);
+	})
+
+    $("#button1").on("click", function(){
+		$("#financeimage5").hide();
+        $("#financeimage4").hide();
+        $("#financeimage3").hide();
+        $("#financeimage2").hide();
+	})
+
+
+    
+
+})
+	
+    </script>
+
+
+    </body>
+
+</html>
