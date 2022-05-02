@@ -68,60 +68,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #navbar {
 	/* border: 1px solid red; */
 	height: 100px;
@@ -134,7 +80,7 @@
 .menu {
 	/* border: 1px solid green; */
 	height: 20px;
-	width: 700px;
+	width: 710px;
 	float: left;
 	position: absolute;
 }
