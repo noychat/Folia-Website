@@ -1,0 +1,467 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
+<link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet">
+        <title>Folia Marketplace Page</title>
+        <style>/*Stylesheet for market.html*/
+            #outercontainer{ 
+                width:100%;
+                min-height: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin:auto;
+                margin-top: 5px;
+            }
+
+            #content1{
+                min-height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: rgba(172, 167, 109, 0.201);
+                margin-bottom: 50px;
+            }
+
+            #textcontent1{
+                width:1325px;
+                display: block;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #content2{
+                min-height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+                margin-bottom: 50px;
+            }
+
+            #textcontent2{
+                width:600px;
+                display: block;
+                align-items: center;
+            }
+
+            
+            h1{
+                font-size: 35pt;
+                letter-spacing: 2px;
+                line-height: 70px;
+            }
+
+            p{
+                font-size: 15pt;
+                font-family: 'Josefin Sans', sans-serif;
+                line-height: 30px;
+            }
+
+            .topimg{
+                width: 500px;
+                display: block;
+                align-items: center;
+            }
+        </style>
+
+        <style>/*Stylesheet for animation*/
+#outerouterbox{
+    margin: auto;
+    max-width: 100%;
+    min-height: auto;
+    background-color: rgba(172, 167, 109, 0.201);
+}
+
+#outerbox{
+    margin:auto;
+    max-width:600px;
+    min-height: auto;
+    margin-top:50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#spotlightbox{
+    margin: auto;
+    display: flex;
+    max-width: 110px;
+    min-height: 120px;
+    justify-content: center;
+    background-color: rgba(172, 167, 109, 0.201);
+    border-radius: 7px;
+
+}
+
+#secondbox{
+    margin: auto;
+    max-width: 600px;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom:100px;
+
+}
+
+.imgsize{
+    width:90px;
+}
+
+#teasource{
+    position:absolute;
+}
+
+#packaging{
+    position:absolute;
+}
+
+#delivery{
+    position:absolute;
+	
+}
+
+#timer{
+	height: 10px; 
+	width: 10px;	
+	background-color: RGB(94, 94, 76);
+    border-radius: 5px;
+    margin-top:150px;
+}
+
+#timerbox{
+    margin: auto;
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+	font-size:17pt;	
+    margin-top:5px;
+
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+#playbutton{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: inline-block;
+    background-color: RGB(94, 94, 76);
+    color:white;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 30px;
+
+}
+
+#resetbutton{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: inline-block;
+    background-color: RGB(94, 94, 76);
+    color:white;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 30px;
+}
+
+#outerdescpbox{
+    margin: auto;
+    max-width: 100%;
+    background-color: rgba(172, 167, 109, 0.201);
+    height:200px;
+}
+
+#descpbox{
+    width:600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: 15pt;
+    margin-top:50px;
+    position:absolute, center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: auto;
+}
+
+#descpbox2{
+    width:600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: 15pt;
+    margin-top:50px;
+    position:absolute, center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: auto;
+}
+
+#descpbox3{
+    width:600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: 15pt;
+    margin-top:50px;
+    position:absolute, center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: auto;
+}
+
+        </style>
+
+<script src="http://iyawebdev.com/jqm.js"></script>
+<script src="http://iyawebdev.com/jqui.min.js"></script>
+
+        <script>/*script for header*/
+            $(function () {
+            $("#header").load("https://noychat.github.io/Folia-Website/foliaheader.html");
+            });
+        </script>
+
+        <script>/*script for animation*/
+
+$(document).ready(function(){
+        $("#spotlightbox").hide();
+        $("#teasource").hide();
+        $("#packaging").hide();
+        $("#delivery").hide();
+        $("#outerdescpbox").hide();
+        $("#descpbox").hide();
+        $("#descpbox2").hide();
+        $("#descpbox3").hide();
+});
+
+var play = function() {
+    $(document).ready(function(){
+
+    });
+    $("#startsound").trigger("play");
+    $("#spotlightbox").hide();
+        $("#teasource").hide();
+        $("#packaging").hide();
+        $("#delivery").hide();
+    $("#spotlightbox").fadeIn(2000);
+	
+    $("#timer").stop().css('width', '1.5%');
+	$("#timer").animate({"width": "600px"}, 40000, "swing");
+    $("#outerdescpbox").slideDown(2000);
+    $("#descpbox").slideDown(2000);
+    $("#descpbox").delay(11000).fadeOut(500);
+    $("#teasource").
+		animate({"top":"1210px", "left":"850px"}, 2000).fadeIn(1000).
+        delay(10000).
+        animate({"top":"1370px", "left":"980px"}, 2000).
+        delay(10000).
+        animate({"top":"1370px", "left":"720px"}, 2000).
+        delay(10000).
+        animate({"top":"1210px", "left":"850px"}, 2000,  "linear", function(){
+			$("#startsound").trigger("pause");
+    
+		})
+		
+    
+    $("#descpbox2").delay(13000).fadeIn(2000);
+    
+	$("#packaging").
+		animate({"top":"1380px", "left":"720px"}, 2000).fadeIn(1000).
+        delay(10000).
+        animate({"top":"1220px", "left":"860px"}, 2000).
+        delay(10000).
+        animate({"top":"1370px", "left":"980px"}, 2000).
+        delay(10000).
+        animate({"top":"1380px", "left":"720px"}, 2000, "linear", function(){
+			$("#startsound").trigger("pause");
+		})
+    $("#descpbox2").delay(11000).fadeOut(500);
+
+    $("#descpbox3").delay(26000).fadeIn(2000);
+    
+    $("#delivery").
+		animate({"top":"1370px", "left":"980px"}, 2000).fadeIn(1000).
+        delay(10000).
+        animate({"top":"1370px", "left":"720px"}, 2000).
+        delay(10000).
+        animate({"top":"1215px", "left":"850px"}, 2000).
+        delay(10000).
+        animate({"top":"1370px", "left":"980px"}, 2000, "linear", function(){
+			$("#startsound").trigger("pause");
+    $("#descpbox3").delay(10000).fadeOut(500);
+    $("#outerdescpbox").slideUp(2000);
+		})
+		
+}
+
+var reset = function(){
+    $("#startsound").trigger("pause");
+    $("#spotlightbox").hide();
+    $("#timer").stop().css('width', '1.5%');
+    $("#teasource").hide().position({"top":"220px", "left":"860"});
+    $("#packaging").hide().position({"top":"220px", "left":"860"});
+    $("#delivery").hide().position({"top":"220px", "left":"860"});
+    $("#outerdescpbox").stop().hide();
+    $("#descpbox").stop().hide();
+    $("#descpbox2").stop().hide();
+    $("#descpbox3").stop().hide();
+    
+}
+
+$(document).ready(function(){
+
+	$("#playbutton").on("click", function(){ 
+	    play();						
+	});
+
+    $("#resetbutton").on("click", function(){ 
+	    reset();						
+	});
+
+});
+        </script>
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <div id="outercontainer">
+            <div id="content1">
+                <div id="textcontent1">
+                    <h1>The Market</h1>
+                    
+                    <p>
+                        There is a large tea market in Los Angeles, where we are starting. The beverage industry in the US is worth $146 billion, and tea is rising as a large segment of that. We plan to target upscale Los Angeles restaurants whose customers are unhappy with the current selection or quality of tea offerings. In this high-end service marketplace, high-quality is crucial to satisfy our customers, which is why we will focus our efforts on premium tea sourced from the best select locations, but also amazing customer service, to best follow through with our customers throughout the whole process of receiving their currated tea.</p>
+                </div>  
+            
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="content2">
+                <div id="textcontent2">
+                    <h1>Major Competitors</h1>
+
+                    <p>As of the moment, our major competitors include other caffeinated beverage distributors and higher-end prepared drinks (e.g. companies like Art of Tea, TeaVivre, Grocery Teas). Indirectly, we compete with drinks at upscale restaurants and hotels, such as spirits, wine, and other liquors. We expect to also be in line with premium restaurants such as Nobu and  Sugarfish, as well as smaller restaurants like Moreton Fig, Town and Gown, and Tommy Club.</p>
+
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <img src="marketstats.png" class="topimg">
+                    <p style="font-size: 12pt;"><em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Statistics for leading tea brands.</em></p>
+                </div> 
+            </div>
+        </div>
+
+        <br>
+    <br>
+    <div id="outerouterbox">
+
+        <br>
+        <br>
+    <div id="secondbox">
+        <div id="text">
+            <strong>Click to see the our product cycle!</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        </div>
+        
+        
+        <audio id="startsound">
+            <source type="audio/mp3" src="Illusions.mp3">
+        </audio>
+        <br>
+        <br>
+        <div id="playbutton">
+            <a href="javascript://">Play</a>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div id="resetbutton">
+            <a href="javascript://">Reset</a>
+        </div>
+    </div>
+
+    
+
+    <div id="spotlightbox">
+        <br>
+    </div>
+
+    <div id="outerbox">
+        <div id="teasource">
+            <img src="sickle.png" class="imgsize"/>
+            
+        </div>
+        
+        <div id="packaging">
+            <img src="leaves.png"style="width:70px;"/>
+           
+        </div>
+
+        <div id="delivery">
+            <img src="tin.png" class="imgsize"/>
+            
+        </div>
+    </div>
+
+
+
+<div id="timerbox">
+    <div id="timer">
+    </div>
+</div>
+
+
+<br>
+<br>
+</div>
+<div id="outerdescpbox">
+    <div id=descpbox>   
+        <strong>Step 1: </strong>
+        <p>
+        We source our teas from distributors that source from China, Taiwan and other areas. As we scale, we aim to establish direct relationships with tea gardens and buy our inventory straight from them. 
+        </p>
+    </div>
+    <div id=descpbox2>   
+        <strong>Step 2:</strong> 
+        <p>
+            In terms of our branding, we will package our tea in our luxury packaging that also emphasizes the streamlined nature of our preparation and serving process. </p>
+    </div>
+    <div id=descpbox3>   
+        <strong>Step 3:</strong> 
+        <p>
+        Our distribution is based in Los Angeles. We source the tea from the finest tea farms in China and import it to the US. We store our products in Los Angeles for quick delivery to our LA-based clients.
+        </p>
+        
+    </div>
+<br>
+</div>
+    </body>
+</html>
