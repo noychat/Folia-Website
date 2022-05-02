@@ -184,6 +184,12 @@
                     
                     }
             
+                    if(localStorage.getItem("searchword") ){
+                        var tempitem = localStorage.getItem("searchword");
+                        document.querySelector("#searchbox").value = tempitem;
+                        searchWebsite(tempitem);
+
+                    }
                     
                     document.querySelector("#search").addEventListener("click", function(){
                         searchWebsite(document.querySelector("#searchbox").value);
