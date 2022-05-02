@@ -125,7 +125,7 @@
 
         img {
             width: 60%;
-            margin-left:300px;
+            margin-left: 300px;
             position: absolute;
             float: left;
         }
@@ -188,17 +188,16 @@
             float: left;
         }
 
-        .cont{
-            width:100%;
+        .cont {
+            width: 100%;
             height: 600px;
             margin-bottom: 0px;
         }
 
-        .cont h2{
+        .cont h2 {
             text-align: center;
             font-size: 19pt;
         }
-
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -223,45 +222,45 @@
                 track our growth (see Appendix F to I).</p>
             <br>
         </div>
-        
+
         <div class="cont" style="margin-top:0px">
 
             <h2> Click the buttons bellow to see folia's projected revenue for year's 1-5:</h2>
-    
+
             <br>
-    
+
             <div id="button1">
                 <input id="button1" type="radio" name="year" value="year1" checked> Year 1
             </div>
-    
+
             <div id="button2">
                 <input id="button2" type="radio" name="year" value="year2"> Year 2
             </div>
-    
+
             <div id="button3">
                 <input id="button3" type="radio" name="year" value="year3"> Year 3
             </div>
-    
+
             <div id="button4">
                 <input id="button4" type="radio" name="year" value="year4"> Year 4
             </div>
-    
+
             <div id="button5">
                 <input id="button5" type="radio" name="year" value="year5"> Year 5
             </div>
-    
-    
+
+
             <br><br><br>
-    
+
             <img id="financeimage1" src="year1.png" alt="year 1 projected revenue">
             <img id="financeimage2" src="year2.png" alt="year 2 projected revenue">
             <img id="financeimage3" src="year3.png" alt="year 3 projected revenue">
             <img id="financeimage4" src="year4.png" alt="year 4 projected revenue">
             <img id="financeimage5" src="year5.png" alt="year 5 projected revenue">
-    
+
         </div>
 
-        
+
         <div id="textbox2">
             <h1 style="text-align: center;">Contingency Plan:</h1>
             <div class="block"></div>
@@ -312,7 +311,8 @@
 
             <p><strong>1. Minimum amount of cash needed to cover your costs:</strong></p>
             <p style="margin-left:50px">In order for Folia tea to cover our costs of operation (BEQ), we need at least
-                <span style="color:rgb(234, 30, 30);"><strong>$2970.75</strong></span> in cash in the bank. </p>
+                <span style="color:rgb(234, 30, 30);"><strong>$2970.75</strong></span> in cash in the bank.
+            </p>
 
             <p><strong>2. The quantity of products you will have to sell per month to cover your costs (BEQ) including
                     both fixed and variable costs:</strong></p>
@@ -336,35 +336,6 @@
     </div> <!-- Outercontainer -->
 
 </body>
-
-<style>
-    @media only screen and (max-width:1400px) {
-
-        /* For tablets: */
-        #textbox2 {
-            width: 80%;
-        }
-
-    }
-
-    @media only screen and (max-width:800px) {
-
-        /* For mobile: */
-        #textbox2 {
-            width: 85%;
-        }
-
-        .column {
-            width: 90%;
-        }
-
-        .row {
-            width: 95%;
-            margin-left: 25px;
-        }
-
-    }
-</style>
 
 
 <script src="http://code.jquery.com/jquery.js"></script>
@@ -407,5 +378,53 @@
     })
 
 </script>
+
+
+<style>
+    @media only screen and (max-width:1400px) {
+
+        /* For tablets: */
+        #textbox2 {
+            width: 80%;
+        }
+
+    }
+
+    @media only screen and (max-width:800px) {
+
+        /* For mobile: */
+        #textbox2 {
+            width: 85%;
+        }
+        
+        .cont {
+            height: 450px;
+        }
+
+        .cont h2{
+            font-size: 14pt;
+        }
+
+        #button1 {
+            margin-left: 100px;
+        }
+
+        img {
+            margin-left: 25px;
+            width: 90%;
+        }
+
+        .column {
+            width: 90%;
+        }
+
+        .row {
+            width: 95%;
+            margin-left: 25px;
+        }
+
+    }
+</style>
+
 
 </html>
