@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet"> 
     <link href="https://noychat.github.io/Folia-Website/majorroutinestyle.css" rel="stylesheet"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
   
 
@@ -41,7 +39,7 @@
     border-radius: 6px;
     font-size: 20px;
     color: RGB(94, 94, 76);
-    width: 200px;
+    width: 220px;
     height: 30px;
     padding-left: 10px;
     transition: all .5s;
@@ -58,6 +56,46 @@
     padding-left: 10px;
     transition: all .5s;
     
+}
+#i1{
+  border: 1px solid red;
+  height: 45px;
+}
+#i2{
+  border: 1px solid blue;
+  height: 45px;
+}
+
+@media (max-width: 400px){
+  
+  .container {
+    width: 380px;
+    top: 300px;
+    left: 2px;
+    position: absolute;
+
+
+  }
+
+.columnleft {
+    width: 350px;
+    margin-left: 5px;
+  }
+
+  .columnright {
+    width: 300px;
+    top: 400px;
+    left: 0px;
+    position: absolute;
+  }
+  #i1{
+  height: 45px;
+  width: 300px;
+}
+#i2{
+  height: 45px;
+  width: 300px;
+}
 }
     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -90,7 +128,7 @@
                 </div>
                
                
-                <!-- Right Column -->
+                <!-- Right Column with Product Desc, Radio, Size, type, price, add to cart -->
                 <div class="columnright">
                
                   <!-- Product Description -->
@@ -100,10 +138,8 @@
                     <p>We source our tea leaves from around the world. Try our many selections of teas and you will taste the difference.</p>
                   </div>
                
-                  <!-- Product Configuration -->
+    
                   <div class="product-configuration">
-
-
 
                      <!-- Tea Size -->
                      <div class="tea-type">
@@ -130,17 +166,17 @@
                
                       <div class="choosetea">
                         <div>
-                        <input data-image="green" data-image1="small_green" type="radio" id="green" name="color" value="0" class="radios2" > 
+                        <input data-image="green" data-image1="small_green" type="radio" id="green" name="color" value="0" class="radios2" onClick="changeColor('g')"> 
                           <label for="green"><span></span></label> 
                           <div class="label">Green Tea</div>    
                         </div>
                         <div>
-                          <input data-image="chamomile" data-image1="small_chamomile" type="radio" id="chamomile" name="color" class="radios2" value="1"> 
+                          <input data-image="chamomile" data-image1="small_chamomile" type="radio" id="chamomile" name="color" class="radios2" value="1" onClick="changeColor('c')"> 
                           <label for="chamomile"><span></span></label>
                           <div class="label">Chamomile Tea</div>    
                         </div>
                         <div>
-                          <input data-image="oolong" data-image1="small_oolong" type="radio" id="oolong" name="color" class="radios2" value="2">
+                          <input data-image="oolong" data-image1="small_oolong" type="radio" id="oolong" name="color" class="radios2" value="2" onClick="changeColor('o')">
                           <label for="oolong"><span></span></label>
                           <div class="label">Oolong Tea</div>  
                         </div>
@@ -167,15 +203,37 @@
 <div id="shoppingcart">
   <h3>Shopping Cart</h3>
   <h5>Item and Price</h5>
-  <div id="itemscart">
+
 <div id="itemdv1A" style="display: none"> <input type="text" name="amount" class="item" value="8oz Green Tea"></div>
 <div id="itemdv2A" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
 
+
 <div id="itemdv1B" style="display: none" > <input type="text" name="amount" class="item" value="8oz Chamomile Tea"></div>
-<div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$21"></div>
+<div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
+
+<div id="itemdv1C" style="display: none" > <input type="text" name="amount" class="item" value="8oz Oolong Tea"></div>
+<div id="itemdv2C" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
+
+
+<div id="itemdv1D" style="display: none" > <input type="text" name="amount" class="item" value="16oz Green Tea"></div>
+<div id="itemdv2D" style="display: none"> <input type="text" name="amount" class="item1" value="$40"></div>
+
+<div id="itemdv1E" style="display: none" > <input type="text" name="amount" class="item" value="16oz Chamomile Tea"></div>
+<div id="itemdv2E" style="display: none"> <input type="text" name="amount" class="item1" value="$40"></div>
+
+<div id="itemdv1F" style="display: none" > <input type="text" name="amount" class="item" value="16oz Oolong Tea"></div>
+<div id="itemdv2F" style="display: none"> <input type="text" name="amount" class="item1" value="$40"></div>
+
 
 <button style="display: none" type="button" class="cart-btn2" id="yourbutton" name="remove" value="10">x</button>
-</div>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton1" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton2" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton3" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton4" name="remove" value="10">x</button>
+<button style="display: none" type="button" class="cart-btn2" id="yourbutton5" name="remove" value="10">x</button>
+
+
+
 </div>
 
 
@@ -184,8 +242,30 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
 <script>
+
+
+window.changeColor = function(value)
+{
+
+    var color = document.body.style.backgroundColor;
+    switch(value)
+    {
+        case 'g':
+            color = "#90978b";
+        break;
+        case 'c':
+            color = "#d2ac7f";
+        break;
+        case 'o':
+            color = "#6d6777";
+        break;
+    }
+    document.querySelector(".container").style.backgroundColor = color;
+}
+
+
     $(document).ready(function() {
- 
+ //click on radio buttons ---> image changes
  $('.choosetea input').on('click', function() {
      var teatype = $(this).attr('data-image');
 
@@ -201,6 +281,8 @@
      $('.columnleft img[data-image = ' + teatype + ']').addClass('active');
      $(this).addClass('active');
  });
+
+
 
 
 
@@ -232,6 +314,15 @@ $('input[name="size"]').on('change', function(){
   
   });
 
+  //local storage cart
+  var save_cart = document.getElementById('cartbutton')
+save_cart.onclick = saveData;
+
+function saveData(){
+  var input = document.getElementById("shoppingcart");
+  localStorage.setItem("amount", input.value);
+  var storedValue = localStorage.getItem("amount");
+}
 
   
 
@@ -259,8 +350,6 @@ $(function() {
   $(`${cartSelector}`).click(() => {
     validityCheck();
   });
-
-
 
 const SMALL = 20;
 const GREEN = 0;
@@ -294,20 +383,42 @@ $(function() {
     validityCheck();
   });
 
-
-
-const SMALL = 20;
-const CHAMOMILE = 0;
-const CARTBUTTON = 5;
+const CHAMOMILE = 1;
 
 function validityCheck() {
-  let $size = $(`${sizeSelector1}`);
-  let $color = $(`${colorSelector1}`);
+  let $size1 = $(`${sizeSelector1}`);
+  let $color1 = $(`${colorSelector1}`);
   
-  let size_flag = $size.is(':checked');
-  let color_flag = $color.is(':checked');
+  let size_flag1 = $size1.is(':checked');
+  let color_flag1 = $color1.is(':checked');
 
-  $('#itemdv1B').toggle(size_flag && color_flag) && $('#itemdv2B').toggle(size_flag && color_flag) && $('#yourbutton').toggle(size_flag && color_flag);
+  $('#itemdv1B').toggle(size_flag1 && color_flag1) && $('#itemdv2B').toggle(size_flag1 && color_flag1) && $('#yourbutton1').toggle(size_flag1 && color_flag1);
+
+}
+
+});
+
+
+const sizeSelector2 = 'input:radio[id=small]';
+const colorSelector2 = 'input:radio[id=oolong]';
+const cartSelector2 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+const OOLONG = 2;
+
+function validityCheck() {
+  let $size2 = $(`${sizeSelector2}`);
+  let $color2 = $(`${colorSelector2}`);
+  
+  let size_flag2 = $size2.is(':checked');
+  let color_flag2 = $color2.is(':checked');
+
+  $('#itemdv1C').toggle(size_flag2 && color_flag2) && $('#itemdv2C').toggle(size_flag2 && color_flag2) && $('#yourbutton2').toggle(size_flag2 && color_flag2);
 
 }
 
@@ -318,9 +429,110 @@ function validityCheck() {
 
 
 
+
+
+const sizeSelector3 = 'input:radio[id=big]';
+const colorSelector3 = 'input:radio[id=green]';
+const cartSelector3 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+const BIG = 40;
+const GREEN = 0;
+
+function validityCheck() {
+  let $size3 = $(`${sizeSelector3}`);
+  let $color3 = $(`${colorSelector3}`);
+  
+  let size_flag3 = $size3.is(':checked');
+  let color_flag3 = $color3.is(':checked');
+
+  $('#itemdv1D').toggle(size_flag3 && color_flag3) && $('#itemdv2D').toggle(size_flag3 && color_flag3) && $('#yourbutton3').toggle(size_flag3 && color_flag3);
+
+}
+
+});
+
+
+const sizeSelector4 = 'input:radio[id=big]';
+const colorSelector4 = 'input:radio[id=chamomile]';
+const cartSelector4 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+const CHAMOMILE = 1;
+
+function validityCheck() {
+  let $size4 = $(`${sizeSelector4}`);
+  let $color4 = $(`${colorSelector4}`);
+  
+  let size_flag4 = $size4.is(':checked');
+  let color_flag4 = $color4.is(':checked');
+
+  $('#itemdv1E').toggle(size_flag4 && color_flag4) && $('#itemdv2E').toggle(size_flag4 && color_flag4) && $('#yourbutton4').toggle(size_flag4 && color_flag4);
+
+}
+
+});
+
+const sizeSelector5 = 'input:radio[id=big]';
+const colorSelector5 = 'input:radio[id=oolong]';
+const cartSelector5 = 'button[name=cart]';
+
+$(function() {
+
+  $(`${cartSelector}`).click(() => {
+    validityCheck();
+  });
+
+const OOLONG = 2;
+
+function validityCheck() {
+  let $size5 = $(`${sizeSelector5}`);
+  let $color5 = $(`${colorSelector5}`);
+  
+  let size_flag5 = $size5.is(':checked');
+  let color_flag5 = $color5.is(':checked');
+
+  $('#itemdv1F').toggle(size_flag5 && color_flag5) && $('#itemdv2F').toggle(size_flag5 && color_flag5) && $('#yourbutton5').toggle(size_flag5 && color_flag5);
+
+}
+
+});
+
+
 document.querySelector('#yourbutton').onclick = function(){
     document.querySelector('#itemscart').style.display = "none" 
 };
+
+document.querySelector('#yourbutton1').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton2').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton3').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton4').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+
+document.querySelector('#yourbutton5').onclick = function(){
+    document.querySelector('#itemscart').style.display = "none" 
+};
+   
 
 </script>
 

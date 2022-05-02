@@ -1,4 +1,4 @@
-/* Basic Styling */
+
    
   .container {
     width: 1200px;
@@ -9,7 +9,7 @@
     position: absolute;
   }
 
-  /* Columns */
+
 .columnleft {
     width: 220%;
     position: relative;
@@ -24,7 +24,7 @@
   }
 
 
-  /* Left Column */
+
 .columnleft img {
     width: 100%;
     position: absolute;
@@ -37,18 +37,12 @@
   }
 
 
-  /* Product Description */
 .product-description {
     border-bottom: 1px solid #E1E8EE;
     margin-bottom: 20px;
   }
 
-
-
-
-
-
-  /* Product Color */
+/*COLOR*/
 .tea-type {
     margin-bottom: 30px;
   }
@@ -93,11 +87,10 @@
   }
    
   .choosetea  input:checked + label span {
-    background-image: url(check-icn.svg);
+    background-image: url(https://noychat.github.io/Folia-Website/check-icn.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
-
 
 
 /* SIZE */
@@ -145,14 +138,6 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-
-
-
-
-
-
-
-
 
 
 
