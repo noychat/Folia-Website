@@ -168,6 +168,11 @@
 		width: 30%;
 	}
 
+	#outercontainer1{
+		margin-top: 10em;
+		margin-left: 90px;
+	}
+
 }
 
 /*css for searchbar*/
@@ -178,7 +183,6 @@
 	flex-direction: row;
 	z-index:3;
 	/*border: solid red 2px;*/
-	
 }
  #searchform {
 	text-align: center;
