@@ -70,14 +70,14 @@ var i = Math.floor(Math.random()*10)
                     
                     document.querySelector("#search").addEventListener("click", function(){
                         searchWebsite(document.querySelector("#searchbox").value);
-                        
+                        window.location.href="searchbar.html"
                     })
 
                     document.querySelector("#searchbox").addEventListener("keydown", function(e){
                         if(e.key === 'Enter'){
                         searchWebsite(document.querySelector("#searchbox").value);
                         event.preventDefault();
-                        window.location.href="searchbar.html"
+                        window.location.href="https://noychat.github.io/Folia-Website/searchbar.html"
                         }
                     })
 /*end of script for body*/
