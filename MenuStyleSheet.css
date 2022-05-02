@@ -160,7 +160,9 @@
 	width:350px;
 	display: flex;
 	flex-direction: row;
-
+	z-index:3; 
+	position:absolute;
+	right:0px;
 	
 	/*border: solid red 2px;*/
 	
