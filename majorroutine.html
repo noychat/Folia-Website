@@ -166,17 +166,17 @@
                
                       <div class="choosetea">
                         <div>
-                        <input data-image="green" data-image1="small_green" type="radio" id="green" name="color" value="0" class="radios2" > 
+                        <input data-image="green" data-image1="small_green" type="radio" id="green" name="color" value="0" class="radios2" onClick="changeColor('g')"> 
                           <label for="green"><span></span></label> 
                           <div class="label">Green Tea</div>    
                         </div>
                         <div>
-                          <input data-image="chamomile" data-image1="small_chamomile" type="radio" id="chamomile" name="color" class="radios2" value="1"> 
+                          <input data-image="chamomile" data-image1="small_chamomile" type="radio" id="chamomile" name="color" class="radios2" value="1" onClick="changeColor('c')"> 
                           <label for="chamomile"><span></span></label>
                           <div class="label">Chamomile Tea</div>    
                         </div>
                         <div>
-                          <input data-image="oolong" data-image1="small_oolong" type="radio" id="oolong" name="color" class="radios2" value="2">
+                          <input data-image="oolong" data-image1="small_oolong" type="radio" id="oolong" name="color" class="radios2" value="2" onClick="changeColor('o')">
                           <label for="oolong"><span></span></label>
                           <div class="label">Oolong Tea</div>  
                         </div>
@@ -203,14 +203,14 @@
 <div id="shoppingcart">
   <h3>Shopping Cart</h3>
   <h5>Item and Price</h5>
- <div id="i1">
+
 <div id="itemdv1A" style="display: none"> <input type="text" name="amount" class="item" value="8oz Green Tea"></div>
 <div id="itemdv2A" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
-</div>
-<div id="i2">
+
+
 <div id="itemdv1B" style="display: none" > <input type="text" name="amount" class="item" value="8oz Chamomile Tea"></div>
 <div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
-</div>
+
 <div id="itemdv1C" style="display: none" > <input type="text" name="amount" class="item" value="8oz Oolong Tea"></div>
 <div id="itemdv2C" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
 
@@ -242,6 +242,28 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
 <script>
+
+
+window.changeColor = function(value)
+{
+
+    var color = document.body.style.backgroundColor;
+    switch(value)
+    {
+        case 'g':
+            color = "#90978b";
+        break;
+        case 'c':
+            color = "#d2ac7f";
+        break;
+        case 'o':
+            color = "#6d6777";
+        break;
+    }
+    document.querySelector(".container").style.backgroundColor = color;
+}
+
+
     $(document).ready(function() {
  //click on radio buttons ---> image changes
  $('.choosetea input').on('click', function() {
@@ -292,6 +314,15 @@ $('input[name="size"]').on('change', function(){
   
   });
 
+  //local storage cart
+  var save_cart = document.getElementById('cartbutton')
+save_cart.onclick = saveData;
+
+function saveData(){
+  var input = document.getElementById("shoppingcart");
+  localStorage.setItem("amount", input.value);
+  var storedValue = localStorage.getItem("amount");
+}
 
   
 
