@@ -93,18 +93,6 @@
 	width: 10%;
 }
 
-.announcement {
-	display: inline-block;
-	height: 30px;
-	text-align: center;
-	width: 100%;
-	background-color: rgb(94, 94, 76);
-	color: white;
-	padding-bottom: 6px;
-	vertical-align: center;
-	font-size: 0.8em;
-	font-family: "Avenir";
-}
 
 .footer {
 	display: inline-block;
@@ -123,7 +111,9 @@
 
 @media only screen and (max-width: 1400px) {
 	/* For tablets: */
+
 	.menu {
+		width:100%;
 		padding-top: 80px;
 		margin-left: 90px;
 	}
@@ -161,7 +151,7 @@
 	}
 
 	#menu li a {
-		width: 76px;
+		width: 50px;
 	}
 
 	#logobox {
@@ -172,7 +162,10 @@
 		margin-top: 10em;
 		margin-left: 90px;
 	}
-
+	
+	.topphoto{
+		width:100%;
+	}
 }
 
 /*css for searchbar*/
