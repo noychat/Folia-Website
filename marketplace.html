@@ -259,12 +259,13 @@ $(document).ready(function(){
 });
 
 var play = function() {
+    $("#startsound").trigger("play");
     $("#spotlightbox").hide();
         $("#teasource").hide();
         $("#packaging").hide();
         $("#delivery").hide();
     $("#spotlightbox").fadeIn(2000);
-	$("#startsound").trigger("play");
+	
     $("#timer").stop().css('width', '1.5%');
 	$("#timer").animate({"width": "600px"}, 40000, "swing");
     $("#outerdescpbox").slideDown(2000);
