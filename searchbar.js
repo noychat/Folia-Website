@@ -69,7 +69,7 @@ var i = Math.floor(Math.random()*10)
             
                     
                     document.querySelector("#search").addEventListener("click", function(){
-                        searchWebsite(document.querySelector("#searchbox").value);
+                        // searchWebsite(document.querySelector("#searchbox").value);
                         console.log("1");
                         document.location.href="https://noychat.github.io/Folia-Website/searchbar.html";
                         console.log("2");
@@ -77,7 +77,7 @@ var i = Math.floor(Math.random()*10)
 
                     document.querySelector("#searchbox").addEventListener("keydown", function(e){
                         if(e.key === 'Enter'){
-                        searchWebsite(document.querySelector("#searchbox").value);
+                        // searchWebsite(document.querySelector("#searchbox").value);
                         // e.preventDefault();
                         document.location.href="https://noychat.github.io/Folia-Website/searchbar.html";
                         // navigateToURL(new URLRequest("https://noychat.github.io/Folia-Website/searchbar.html"),"_blank");
