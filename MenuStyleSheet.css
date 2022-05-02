@@ -158,12 +158,11 @@
 
 /*css for searchbar*/
 
-#outercontainer{
+#outercontainer1{
 	width:350px;
 	display: flex;
 	flex-direction: row;
-	z-index: -1;
-	
+	z-index:3;
 	/*border: solid red 2px;*/
 	
 }

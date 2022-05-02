@@ -30,53 +30,56 @@ var i = Math.floor(Math.random()*10)
 
                     
 /*script for body*/
-                    var searchWebsite = function(searchphrase){
+                    // var searchWebsite = function(searchphrase){
                         
                     
-                        newhtml = "";
+                    //     newhtml = "";
                         
-                        newhtml += "<div id='searchresult' target='_blank'><h1>Search Results:</h1><br>";
+                    //     newhtml += "<div id='searchresult' target='_blank'><h1>Search Results:</h1><br>";
             
                         
                         
-                        var	count = 0;
-                        for (i=0; i<10; i=i+1) {
+                    //     var	count = 0;
+                    //     for (i=0; i<10; i=i+1) {
                     
-                            if(keywords[i].toLowerCase().indexOf(searchphrase.toLowerCase()) != -1 || linkname[i].toLowerCase().indexOf(searchphrase.toLowerCase()) != -1 || websitename[i].toLowerCase().indexOf(searchphrase.toLowerCase()) != -1){
-                                count++;
-                                // count = count + 1
-                                newhtml = newhtml + "<div><h2>" + "<a href=" + linkurl[i] + ">"+ linkname[i]+ "</a>" +"</h2>" + websitename[i] + "<br><br><br></div>";
-                            } else{
+                    //         if(keywords[i].toLowerCase().indexOf(searchphrase.toLowerCase()) != -1 || linkname[i].toLowerCase().indexOf(searchphrase.toLowerCase()) != -1 || websitename[i].toLowerCase().indexOf(searchphrase.toLowerCase()) != -1){
+                    //             count++;
+                    //             // count = count + 1
+                    //             newhtml = newhtml + "<div><h2>" + "<a href=" + linkurl[i] + ">"+ linkname[i]+ "</a>" +"</h2>" + websitename[i] + "<br><br><br></div>";
+                    //         } else{
 
-                                /*newhtml = newhtml + "<div><h2>" + "Sorry, we found no results from your search." + "</h2><br></div>";*/
-                            }
+                    //             /*newhtml = newhtml + "<div><h2>" + "Sorry, we found no results from your search." + "</h2><br></div>";*/
+                    //         }
                                 
                             
-                            }
+                    //         }
                     
-                            console.log(newhtml);
+                    //         console.log(newhtml);
                     
-                            if(count==0){
-                                alert ('Did not find any results');
-                                newhtml = newhtml + "<div id='noresults'>" + ":( Sorry, we found no results from your search." + "<br></div>";
-                            } else{
-                                alert('Found ' + count + " results")
-                            }
+                    //         if(count==0){
+                    //             alert ('Did not find any results');
+                    //             newhtml = newhtml + "<div id='noresults'>" + ":( Sorry, we found no results from your search." + "<br></div>";
+                    //         } else{
+                    //             alert('Found ' + count + " results")
+                    //         }
                         
-                        document.querySelector('#contentbox').innerHTML = newhtml;
+                    //     // document.querySelector('#contentbox').innerHTML = newhtml;
                     
+                    // }
+                    var searchsave = function(){
+                        var savetoword = document.querySelector("#searchbox").value;
+                        localStorage.setItem("searchword", savetoword);
+                        document.location.href="https://noychat.github.io/Folia-Website/searchbar.html";
                     }
-            
                     
                     document.querySelector("#search").addEventListener("click", function(){
-                        searchWebsite(document.querySelector("#searchbox").value);
-                        
+                        searchsave();
                     })
 
                     document.querySelector("#searchbox").addEventListener("keydown", function(e){
                         if(e.key === 'Enter'){
-                        searchWebsite(document.querySelector("#searchbox").value);
-                        event.preventDefault();
+                        searchsave();
+                        e.preventDefault();
                         }
                     })
 /*end of script for body*/
