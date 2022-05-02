@@ -77,6 +77,7 @@ var i = Math.floor(Math.random()*10)
                         if(e.key === 'Enter'){
                         searchWebsite(document.querySelector("#searchbox").value);
                         event.preventDefault();
+                        window.location.href="searchbar.html"
                         }
                     })
 /*end of script for body*/
