@@ -161,9 +161,7 @@
 	width:350px;
 	display: flex;
 	flex-direction: row;
-	z-index:3; 
-	position:absolute;
-	right:0px;
+	z-index: -1;
 	
 	/*border: solid red 2px;*/
 	
@@ -177,7 +175,7 @@
 	/*border: solid 1px black;*/
 	width:350px;
 	border-radius: 10px;
-	justify-content: flex-end;
+	justify-content: center;
 }
 #searchresult{
 	text-align: left;
