@@ -30,9 +30,9 @@
 }
 
 #menu ul ul {
-	top: 50px;
+	top: 0px;
 	visibility: hidden;
-	position: absolute;
+	position: relative;
 }
 
 #menu ul ul ul {
