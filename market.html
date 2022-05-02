@@ -257,6 +257,9 @@ $(document).ready(function(){
 });
 
 var play = function() {
+    $(document).ready(function(){
+
+    });
     $("#startsound").trigger("play");
     $("#spotlightbox").hide();
         $("#teasource").hide();
@@ -317,9 +320,9 @@ var reset = function(){
     $("#startsound").trigger("pause");
     $("#spotlightbox").hide();
     $("#timer").stop().css('width', '1.5%');
-    $("#teasource").stop().hide().position({"top":"220px", "left":"860"});
-    $("#packaging").stop().hide().position({"top":"220px", "left":"860"});
-    $("#delivery").stop().hide().position({"top":"220px", "left":"860"});
+    $("#teasource").hide().position({"top":"220px", "left":"860"});
+    $("#packaging").hide().position({"top":"220px", "left":"860"});
+    $("#delivery").hide().position({"top":"220px", "left":"860"});
     $("#outerdescpbox").stop().hide();
     $("#descpbox").stop().hide();
     $("#descpbox2").stop().hide();
