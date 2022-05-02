@@ -73,6 +73,8 @@
         </style>
 
         <style>/*Stylesheet for animation*/
+
+
 #outerouterbox{
     margin: auto;
     max-width: 100%;
@@ -257,12 +259,13 @@ $(document).ready(function(){
 });
 
 var play = function() {
+    $("#startsound").trigger("play");
     $("#spotlightbox").hide();
         $("#teasource").hide();
         $("#packaging").hide();
         $("#delivery").hide();
     $("#spotlightbox").fadeIn(2000);
-	$("#startsound").trigger("play");
+	
     $("#timer").stop().css('width', '1.5%');
 	$("#timer").animate({"width": "600px"}, 40000, "swing");
     $("#outerdescpbox").slideDown(2000);
@@ -282,7 +285,7 @@ var play = function() {
 		
     
     $("#descpbox2").delay(13000).fadeIn(2000);
-    $("#descpbox2").delay(11000).fadeOut(500);
+    
 	$("#packaging").
 		animate({"top":"1380px", "left":"720px"}, 2000).fadeIn(1000).
         delay(10000).
@@ -293,10 +296,10 @@ var play = function() {
         animate({"top":"1380px", "left":"720px"}, 2000, "linear", function(){
 			$("#startsound").trigger("pause");
 		})//function close, animate close
-
+    $("#descpbox2").delay(11000).fadeOut(500);
 	//animate({map}, length, easing, callback)
     $("#descpbox3").delay(26000).fadeIn(2000);
-    $("#descpbox3").delay(10000).fadeOut(500);
+    
     $("#delivery").
 		animate({"top":"1370px", "left":"980px"}, 2000).fadeIn(1000).
         delay(10000).
@@ -306,9 +309,11 @@ var play = function() {
         delay(10000).
         animate({"top":"1370px", "left":"980px"}, 2000, "linear", function(){
 			$("#startsound").trigger("pause");
+    $("#descpbox3").delay(10000).fadeOut(500);
     $("#outerdescpbox").slideUp(2000);
 		})//function close, animate close
 		
+    
 }
 
 var reset = function(){
@@ -388,7 +393,7 @@ $(document).ready(function(){
         
         
         <audio id="startsound">
-            <source type="audio/mp3" src="Illusions.mp3">
+            <source type="audio/mp3" src="recording1.mp3">
         </audio>
         <br>
         <br>
