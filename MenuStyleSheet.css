@@ -18,7 +18,7 @@
 	height: 30px;
 	display: block;
 	text-decoration: none;
-	text-align: center;
+	text-align: left;
 	line-height: 30px;
 	/* background-color: rgb(226, 112, 58); */
 	color: black;
@@ -30,16 +30,16 @@
 }
 
 #menu ul ul {
-	top: 0px;
-	visibility: hidden;
-	position: relative;
+	display: block;
+	text-decoration: none;
+	text-align: left;
 }
 
 #menu ul ul ul {
-	position: absolute;
-	top: 0px;
-	left: 100px;
-	visibility: hidden;
+	display: block;
+	text-decoration: none;
+	text-align: left;
+	left: 30px;
 }
 
 #menu ul li:hover ul {
