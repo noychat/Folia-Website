@@ -6,7 +6,6 @@
     <link href="https://noychat.github.io/Folia-Website/MenuStyleSheet.css" rel="stylesheet"> 
     <link href="https://noychat.github.io/Folia-Website/majorroutinestyle.css" rel="stylesheet"> 
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
   
 
@@ -57,6 +56,48 @@
     padding-left: 10px;
     transition: all .5s;
     
+}
+#i1{
+  border: 1px solid red;
+  height: 45px;
+}
+#i2{
+  border: 1px solid blue;
+  height: 45px;
+}
+
+@media (max-width: 400px){
+  body{
+    background-color: blanchedalmond;
+  }
+  .container {
+    width: 380px;
+    top: 300px;
+    left: 2px;
+    position: absolute;
+    border: 1px solid red;
+
+  }
+
+.columnleft {
+    width: 350px;
+    margin-left: 5px;
+  }
+
+  .columnright {
+    width: 300px;
+    top: 400px;
+    left: 0px;
+    position: absolute;
+  }
+  #i1{
+  height: 45px;
+  width: 300px;
+}
+#i2{
+  height: 45px;
+  width: 300px;
+}
 }
     </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -164,13 +205,14 @@
 <div id="shoppingcart">
   <h3>Shopping Cart</h3>
   <h5>Item and Price</h5>
-  <div id="itemscart">
+ <div id="i1">
 <div id="itemdv1A" style="display: none"> <input type="text" name="amount" class="item" value="8oz Green Tea"></div>
 <div id="itemdv2A" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
-
+</div>
+<div id="i2">
 <div id="itemdv1B" style="display: none" > <input type="text" name="amount" class="item" value="8oz Chamomile Tea"></div>
 <div id="itemdv2B" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
-
+</div>
 <div id="itemdv1C" style="display: none" > <input type="text" name="amount" class="item" value="8oz Oolong Tea"></div>
 <div id="itemdv2C" style="display: none"> <input type="text" name="amount" class="item1" value="$20"></div>
 
@@ -193,7 +235,7 @@
 <button style="display: none" type="button" class="cart-btn2" id="yourbutton5" name="remove" value="10">x</button>
 
 
-</div>
+
 </div>
 
 
@@ -219,6 +261,8 @@
      $('.columnleft img[data-image = ' + teatype + ']').addClass('active');
      $(this).addClass('active');
  });
+
+
 
 
 
@@ -358,13 +402,6 @@ function validityCheck() {
 
 
 
-
-
-
-
-
-
-
 const sizeSelector3 = 'input:radio[id=big]';
 const colorSelector3 = 'input:radio[id=green]';
 const cartSelector3 = 'button[name=cart]';
@@ -443,7 +480,6 @@ function validityCheck() {
 });
 
 
-
 document.querySelector('#yourbutton').onclick = function(){
     document.querySelector('#itemscart').style.display = "none" 
 };
@@ -467,7 +503,7 @@ document.querySelector('#yourbutton4').onclick = function(){
 document.querySelector('#yourbutton5').onclick = function(){
     document.querySelector('#itemscart').style.display = "none" 
 };
-
+   
 
 </script>
 
