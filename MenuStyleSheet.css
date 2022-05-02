@@ -158,7 +158,7 @@
 /*css for searchbar*/
 
 #outercontainer{
-	width:350px!important;
+	width:350px;
 	display: flex;
 	flex-direction: row;
 	z-index:3; 
