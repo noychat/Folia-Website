@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@350&display=swap" rel="stylesheet">
     <style>
-
         #outercontainer {
             width: 100%;
             min-height: auto;
@@ -35,6 +34,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
+            padding-bottom: 2em;
         }
 
         #maintextbox {
@@ -49,19 +49,7 @@
             margin-left: 50px;
         }
 
-        #maintextbox2 {
-            width: 530px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            text-align: right;
-            min-height: auto;
-            align-items: center;
-            margin-right: -150px;
-        }
-
-        #maintextbox2 p{
+        #maintextbox2 p {
             font-size: 15pt;
             line-height: 30px;
             margin-top: -40px;
@@ -96,7 +84,6 @@
             width: 160px;
             height: 40px;
             font-size: 10pt;
-
         }
 
         #middlebox {
@@ -121,21 +108,15 @@
             background-color: transparent;
         }
 
-        .transition {
-            min-width: auto;
-            height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            font-size: 27pt;
-            letter-spacing: 1.5px;
-            color: rgb(62, 52, 36);
-        }
-
         .icons {
             width: 100px;
 
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
         #bottombox {
@@ -150,19 +131,43 @@
             color: white;
         }
 
-        .bottomphoto {
-            max-width: 800px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
+        .left {
+            float: right;
+            width: 30%;
+            padding-right: 100px;
+            height: 300px;
+            line-height: 30px;
+            margin-top: 80px;
+        }
+
+        .left h1 {
+            font-family: 'Josefin Sans', sans-serif;
+            color: white;
+        }
+
+        .right {
+            float: right;
+            width: auto;
+            padding-right: 250px;
+            height: auto;
+            text-align: right;
+        }
+
+        .service {
+            margin: auto;
         }
 
         .textsize {
             font-size: 15pt;
         }
+
         p {
             font-family: 'Josefin Sans', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -185,13 +190,15 @@
                 <!--box with text for main photo-->
                 <h3><span class="highlightme">Currated tea collections for fine restaurants</span></h3>
                 <h1>THE FINEST LEAVES TO ELEVATE YOUR DINING EXPERIENCE</h1>
-                <input type="button" value="Contact Us" class="contactbutton"
-                    href="https://noychat.github.io/Folia-Website/contact.html">
+                <a input type="button" value="Contact Us" class="contactbutton"
+                    href="https://noychat.github.io/Folia-Website/contact.html"><br>Contact Us</a>
             </div>
         </div>
         <br>
         <br>
-        <div class="transition">Our Services</div>
+        <div class="service">
+            <h1>Our Services</h1>
+        </div>
         <div id="middlebox">
             <!--box for middle portion w/ services-->
 
@@ -222,8 +229,6 @@
                 <br>
             </div>
             <div class="servicebox">
-
-
                 <br>
                 <strong><span class="highlightme">DELIVERY</span></strong>
                 <br>
@@ -238,19 +243,22 @@
         </div>
         <!--<div id="transition">Contact Us</div>-->
         <div id="bottombox">
-
-            <div id="maintextbox2">
+            <div id=" row">
                 <!--box with text for main photo-->
-                <span class="transition" style="color:white">About Us</span>
-
-                <p>Only sourcing the finest leaves, Folia provides bespoke tea collections for elevated dining
-                    experiences. Our in-house sommeliers work with our partners to deliver distinct offerings for your
-                    business. Fill out the form below and we will be in contact with you shortly.</p>
-                <br>
-                <br>
-                <br>
+                <div class="right">
+                    <img src="foliamockup3.jpg">
+                </div>
+                <div class="left">
+                    <h1>About Us</h1>
+                    <p>Only sourcing the finest leaves, Folia provides bespoke tea collections for elevated dining
+                        experiences. Our in-house sommeliers work with our partners to deliver distinct offerings for
+                        your
+                        business. Fill out the form below and we will be in contact with you shortly.</p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
-            <img src="foliamockup3.jpg" class="bottomphoto">
         </div>
 
     </div>
@@ -259,16 +267,7 @@
 </body>
 
 <style>
-    @media only screen and (max-width:1400px) {
-
-        /* For tablets: */
-        #textbox2 {
-            width: 80%;
-        }
-
-    }
-
-    @media only screen and (max-width:800px) {
+    @media only screen and (max-width: 1400px) {
 
         /* For mobile: */
         #textbox2 {
@@ -279,10 +278,21 @@
             width: 90%;
         }
 
-        .row{
+        .row {
             margin-left: 10px;
         }
 
+        .topphoto {
+            width: 100%;
+        }
+
+        .right {
+            display:none;
+        }
+
+        #outercontainer {
+            height: 1000px;
+        }
     }
 </style>
 
