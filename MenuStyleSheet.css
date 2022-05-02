@@ -25,7 +25,6 @@
 	line-height: 30px;
     margin-right: 50px;
 	color: black;
-	visibility:visible;
 }
 
 #menu li a:hover{
@@ -135,7 +134,7 @@
 .menu {
 	/* border: 1px solid green; */
 	height: 20px;
-	width: 650px;
+	width: 700px;
 	float: left;
 	position: absolute;
 }
