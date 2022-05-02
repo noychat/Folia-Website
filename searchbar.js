@@ -77,7 +77,8 @@ var i = Math.floor(Math.random()*10)
                         if(e.key === 'Enter'){
                         searchWebsite(document.querySelector("#searchbox").value);
                         e.preventDefault();
-                        window.location.href="https://noychat.github.io/Folia-Website/searchbar.html"
+                    
+                        navigateToURL(new URLRequest("https://noychat.github.io/Folia-Website/searchbar.html"),"_blank");
                         }
                     })
 /*end of script for body*/
