@@ -1,7 +1,7 @@
 #menu *{
 	margin: 0;
 	padding:0;
-
+	font-size: 10pt;
         font-weight: normal;
         font-style: normal;
 }
@@ -10,22 +10,23 @@
 	position: relative;
 	float: left;
 	list-style: none;
+
+	visibility: hidden;
 }
 
 
 #menu li a{
-	width:100px;
+	width:80px;
 	height: 30px;
 	display: block;
 	text-decoration:none;
 	text-align: center;
 	line-height: 30px;
-	color: RGB(94, 94, 76);
     margin-right: 50px;
 }
 
 #menu li a:hover{
-	color: black;
+	color: rgb(94, 94, 76);
 }
 
 
@@ -55,6 +56,64 @@
 #menu ul ul li:hover ul{
 	visibility:visible;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -167,7 +226,6 @@
 	display: flex;
 	flex-direction: row;
 	z-index:3;
-	position:absolute;
 	/*border: solid red 2px;*/
 	
 }
