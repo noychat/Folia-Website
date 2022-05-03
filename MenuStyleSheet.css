@@ -7,16 +7,30 @@
 	color: black;
 }
 
+.menu {
+	/*border: 1px solid green;*/
+	height: 20px;
+	width: auto;
+	float: left;
+	position: absolute;
+	border: solid green 2px;
+}
+
+#menu {
+	padding-left: 3em;
+}
+
 #menu li {
 	position: relative;
 	float: left;
 	list-style: none;
 	color: black;
 	margin-top: 3px;
+	
 }
 
 #menu li a {
-	width: 80px;
+	width: auto;
 	height: 20px;
 	display: block;
 	text-decoration: none;
@@ -41,7 +55,6 @@
 #menu ul ul ul {
 	position: absolute;
 	top: 0px;
-	left: 100px;
 	visibility: hidden;
 	color: black;
 }
@@ -66,13 +79,6 @@
 
 #nav {
 	margin-top: 40px;
-}
-.menu {
-	/*border: 1px solid green;*/
-	height: 20px;
-	width: 800px;
-	float: left;
-	position: absolute;
 }
 
 #logobox {
@@ -198,8 +204,7 @@ body {
 	/* For tablets: */
 	.menu {
 		margin-top: 120px;
-		margin-left: 50px;
-		/*border: solid green 2px;*/
+		margin-left: 200px;
 	}
 
 	#navbar {
